@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="690" viewBox="0 0 1080 690" role="img" aria-labelledby="title description">
+<title id="title">End the meeting, not its history.</title><desc id="description">Capture ends before processing ends. Finishing drains accepted audio, extraction and research. Interrupted work requires explicit recovery; opening history never starts recording.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 05</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">End the meeting, not its history.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Runtime states and saved viewing are deliberately different concepts.</text>
+<path d="M40 642 L1040 642" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="668" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<text x="40" y="163" font-size="15" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">RUNTIME</text>
+<rect x="40" y="195" width="280" height="116" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 213 V293" stroke="#2563a6" stroke-width="4"/>
+<text x="72" y="229" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Capturing</text>
+<text x="72" y="261" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Audio + checks are active</text>
+<rect x="400" y="195" width="280" height="116" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M416 213 V293" stroke="#a96615" stroke-width="4"/>
+<text x="432" y="229" font-size="20" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">Paused</text>
+<text x="432" y="261" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Fresh inputs on Resume</text>
+<rect x="760" y="195" width="280" height="116" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M776 213 V293" stroke="#6d55a4" stroke-width="4"/>
+<text x="792" y="229" font-size="20" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">Finishing</text>
+<text x="792" y="261" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Drain accepted work</text>
+<path d="M320 226 L400 226" fill="none" stroke="#a96615" stroke-width="2" marker-end="url(#arrow-amber)"/>
+<text x="330" y="215" font-size="15" fill="#a96615" font-weight="400" letter-spacing="0" text-anchor="start">Pause</text>
+<path d="M400 287 L320 287" fill="none" stroke="#2563a6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="324" y="278" font-size="15" fill="#2563a6" font-weight="400" letter-spacing="0" text-anchor="start">Resume</text>
+<path d="M680 250 L760 250" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="700" y="238" font-size="15" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">End</text>
+<path d="M180 311 L180 350 L900 350 L900 311" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="445" y="342" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">End / Meet departure</text>
+<rect x="40" y="415" width="460" height="140" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 433 V537" stroke="#24313f" stroke-width="4"/>
+<text x="72" y="449" font-size="20" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Stopped / saved history</text>
+<text x="72" y="481" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Completed or explicitly incomplete</text>
+<text x="72" y="506" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Relational checkpoints + view state</text>
+<rect x="600" y="415" width="440" height="140" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M616 433 V537" stroke="#2563a6" stroke-width="4"/>
+<text x="632" y="449" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Past meetings</text>
+<text x="632" y="481" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Open without capture or new requests</text>
+<text x="632" y="506" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Explicitly recover interrupted work</text>
+<path d="M500 480 L600 480" fill="none" stroke="#2563a6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="507" y="462" font-size="17" fill="#2563a6" font-weight="400" letter-spacing="0" text-anchor="start">Read</text>
+<path d="M900 311 L900 385 L270 385 L270 415" fill="none" stroke="#087e8b" stroke-width="2" marker-end="url(#arrow-teal)"/>
+<text x="410" y="377" font-size="16" fill="#087e8b" font-weight="400" letter-spacing="0" text-anchor="start">Drain or mark incomplete</text>
+<text x="40" y="608" font-size="19" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Returning to the list does not cancel finishing or delete committed results.</text>
+</g></svg>

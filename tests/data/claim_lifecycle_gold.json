@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "description": "Separate lifecycle extension, frozen before calls. Original holdout untouched. Explicit term checks are fidelity proxies, not semantic truth judgments.",
+  "cases": [
+    {
+      "id": "repeat_new_evidence",
+      "texts": [
+        "As discussed, SQLite WAL works across a network filesystem."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "fidelity": null
+    },
+    {
+      "id": "repeat_already_linked",
+      "texts": [
+        "SQLite WAL works across a network filesystem."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ]
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [],
+      "fidelity": null
+    },
+    {
+      "id": "scope_update",
+      "texts": [
+        "Correction to our existing SQLite WAL claim: it works only when every process accessing the database runs on the same host, not across network filesystems."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "fidelity": {
+        "all_terms": [
+          "sqlite",
+          "wal"
+        ],
+        "any_terms": [
+          "same host",
+          "same machine",
+          "same computer",
+          "single host"
+        ],
+        "forbidden_phrases": [
+          "works across a network filesystem"
+        ]
+      }
+    },
+    {
+      "id": "independent_create",
+      "texts": [
+        "Separately from our existing SQLite WAL network-filesystem question, SQLite supports foreign-key constraints, so we can enforce relationships."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "candidate_id": null,
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "fidelity": {
+        "all_terms": [
+          "sqlite"
+        ],
+        "any_terms": [
+          "foreign-key",
+          "foreign key"
+        ],
+        "forbidden_phrases": []
+      }
+    },
+    {
+      "id": "explicit_retract",
+      "texts": [
+        "Withdraw the SQLite WAL network-filesystem premise. We will not depend on it for any decision."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "retract",
+          "category": "technical_behavior",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "fidelity": null
+    },
+    {
+      "id": "withdraw_before_create",
+      "texts": [
+        "SQLite WAL works over a network filesystem.",
+        "Withdraw that premise completely; no decision depends on it."
+      ],
+      "candidates": [],
+      "split": "lifecycle",
+      "expected": [],
+      "fidelity": null
+    },
+    {
+      "id": "correction_before_create",
+      "texts": [
+        "SQLite WAL works over a network filesystem.",
+        "Correction: SQLite WAL requires all processes to run on the same host. Our design must depend on that restriction instead."
+      ],
+      "candidates": [],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "candidate_id": null,
+          "required_evidence": [
+            2
+          ]
+        }
+      ],
+      "fidelity": {
+        "all_terms": [
+          "sqlite",
+          "wal"
+        ],
+        "any_terms": [
+          "same host",
+          "same machine",
+          "same computer",
+          "single host"
+        ],
+        "forbidden_phrases": [
+          "works over a network filesystem"
+        ]
+      }
+    },
+    {
+      "id": "retracted_repeat",
+      "texts": [
+        "Just repeating the earlier SQLite WAL network-filesystem claim, with no new evidence or change."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "retracted",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [],
+      "fidelity": null
+    },
+    {
+      "id": "multi_turn_scope",
+      "texts": [
+        "SQLite WAL works across a network filesystem.",
+        "Keep the same claim under review, but narrow it: every process must be on the same host.",
+        "Yes, the same-host condition is the one our design depends on now."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "category": "technical_behavior",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            2,
+            3
+          ]
+        }
+      ],
+      "fidelity": {
+        "all_terms": [
+          "sqlite",
+          "wal"
+        ],
+        "any_terms": [
+          "same host",
+          "same-host",
+          "same machine",
+          "same computer",
+          "single host"
+        ],
+        "forbidden_phrases": [
+          "works across a network filesystem"
+        ]
+      }
+    },
+    {
+      "id": "unchanged_scope_paraphrase",
+      "texts": [
+        "To repeat our corrected premise: SQLite WAL requires the processes using the database to be on one host."
+      ],
+      "candidates": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "state": "candidate",
+          "topic_key": "sqlite-wal-network",
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "statement": "SQLite WAL requires all processes using the database to run on the same host.",
+          "category": "technical_behavior",
+          "conditions": [
+            "All processes on the same host"
+          ],
+          "missing_information": [],
+          "evidence_ids": []
+        }
+      ],
+      "split": "lifecycle",
+      "expected": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "fidelity": null
+    }
+  ]
+}

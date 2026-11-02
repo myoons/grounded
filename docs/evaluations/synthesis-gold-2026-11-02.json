@@ -1,0 +1,1893 @@
+{
+  "created_at": "2026-11-02T05:28:10.766582+00:00",
+  "source_commit": "340b9c7d63405cc72416c8ec30800a592955d482",
+  "gold_sha256": "d9e282164d320e3e7ef6ef950bfe04dbeae1c84bc0501e6e2587f7b4f1af6f45",
+  "prompt_sha256": "c7ee9b095a46824d24c47343a74629a4c98000fa445e3ea15f4fee71fa4e941f",
+  "model": "kimi-k3",
+  "concurrency": 3,
+  "repeats": 2,
+  "total": 30,
+  "passed": 27,
+  "model_calls_completed": 26,
+  "scope": "Synthetic fixed evidence; no live search; lexical scope checks do not prove entailment; manual semantic review required.",
+  "reports": [
+    {
+      "id": "capability_supported",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "conditional",
+        "summary": "Only if the deployment is on a paid plan: the supplied fictional LumaBox specification says version 4 supports CSV export on all paid plans.",
+        "recommendation": "Confirm the current plan is paid before relying on CSV export availability.",
+        "caveats": [
+          "The only source is a synthetic fictional specification, so the finding may not establish real product behavior."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox version 4 supports CSV export on all paid plans."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/capability_supported/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "091b4e9bc47c2e43f6977727dfeb9d14c4822e8d452a3e4e87debfc0d0e8f1e9",
+            "excerpt_chars": 56,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox version 4 support CSV export?",
+        "usage": {
+          "total_tokens": 1121,
+          "round_trip_ms": 7342.95,
+          "queue_delay_ms": 111,
+          "provider_execution_ms": 6075,
+          "completion_tokens": 134,
+          "reasoning_tokens": 26
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 7345,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:40.054000+00:00",
+        "elapsed_ms": 7345
+      },
+      "checks": {
+        "verdict": false,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"conditional\",\"summary\":\"Only if the deployment is on a paid plan: the supplied fictional LumaBox specification says version 4 supports CSV export on all paid plans.\",\"recommendation\":\"Confirm the current plan is paid before relying on CSV export availability.\",\"caveats\":[\"The only source is a synthetic fictional specification, so the finding may not establish real product behavior.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1121,
+        "round_trip_ms": 7342.95,
+        "queue_delay_ms": 111,
+        "provider_execution_ms": 6075,
+        "completion_tokens": 134,
+        "reasoning_tokens": 26
+      },
+      "raw_verdict": "conditional"
+    },
+    {
+      "id": "capability_version",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The supplied document confirms CSV export for LumaBox 4 but explicitly gives no information about version 3 support.",
+        "recommendation": "Do not rely on version 3 CSV export until a version 3 source confirms it.",
+        "caveats": [
+          "Only LumaBox 4 support is documented in the supplied excerpt."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This document provides no information about version 3."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/capability_version/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "07264967e8ce126cdb9d4c5bbd59b8d3b545ba506c4a70357666a506d1972ce5",
+            "excerpt_chars": 93,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox version 3 support CSV export?",
+        "usage": {
+          "total_tokens": 1191,
+          "round_trip_ms": 8383.9,
+          "queue_delay_ms": 111,
+          "provider_execution_ms": 7178,
+          "completion_tokens": 181,
+          "reasoning_tokens": 78
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 8385,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:41.135073+00:00",
+        "elapsed_ms": 8385
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"The supplied document confirms CSV export for LumaBox 4 but explicitly gives no information about version 3 support.\",\"recommendation\":\"Do not rely on version 3 CSV export until a version 3 source confirms it.\",\"caveats\":[\"Only LumaBox 4 support is documented in the supplied excerpt.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1191,
+        "round_trip_ms": 8383.9,
+        "queue_delay_ms": 111,
+        "provider_execution_ms": 7178,
+        "completion_tokens": 181,
+        "reasoning_tokens": 78
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "plan_overgeneralization",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "No. LumaBox Enterprise has unlimited exports, but the Free plan is limited to ten exports per month, so the claim is false.",
+        "recommendation": "State plan-specific limits; do not present unlimited exports as universal across all plans.",
+        "caveats": [
+          "Excerpt covers only Enterprise and Free plans; other tiers' limits are unknown."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox Free permits ten exports per month."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/plan_overgeneralization/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "2f94d8e34c42277cd946c11c6ac8a723f516d8070e3df3a3dbc9903ed4d0158a",
+            "excerpt_chars": 90,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox provide unlimited exports on every plan?",
+        "usage": {
+          "total_tokens": 1153,
+          "round_trip_ms": 4156.07,
+          "queue_delay_ms": 117,
+          "provider_execution_ms": 3411,
+          "completion_tokens": 133,
+          "reasoning_tokens": 21
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 4157,
+          "validation_ms": 1
+        },
+        "completed_at": "2026-11-02T05:26:36.916029+00:00",
+        "elapsed_ms": 4158
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"No. LumaBox Enterprise has unlimited exports, but the Free plan is limited to ten exports per month, so the claim is false.\",\"recommendation\":\"State plan-specific limits; do not present unlimited exports as universal across all plans.\",\"caveats\":[\"Excerpt covers only Enterprise and Free plans; other tiers' limits are unknown.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1153,
+        "round_trip_ms": 4156.07,
+        "queue_delay_ms": 117,
+        "provider_execution_ms": 3411,
+        "completion_tokens": 133,
+        "reasoning_tokens": 21
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "plan_unmentioned",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Only Enterprise unlimited exports are documented; the supplied source explicitly says no Free plan limits are specified.",
+        "recommendation": "Do not claim unlimited Free exports until LumaBox publishes Free plan terms with effective date and billing scope.",
+        "caveats": [
+          "Evidence covers Enterprise only and cannot disprove or prove Free entitlements."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "No Free plan limits are specified in this document."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/plan_unmentioned/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "256f83df6d25116741dcc739c22dd44617c17e9bf398255748c3a3745004a686",
+            "excerpt_chars": 98,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox Free provide unlimited exports?",
+        "usage": {
+          "total_tokens": 1187,
+          "round_trip_ms": 7855.33,
+          "queue_delay_ms": 86,
+          "provider_execution_ms": 7184,
+          "completion_tokens": 174,
+          "reasoning_tokens": 73
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 7858,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:44.776658+00:00",
+        "elapsed_ms": 7858
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Only Enterprise unlimited exports are documented; the supplied source explicitly says no Free plan limits are specified.\",\"recommendation\":\"Do not claim unlimited Free exports until LumaBox publishes Free plan terms with effective date and billing scope.\",\"caveats\":[\"Evidence covers Enterprise only and cannot disprove or prove Free entitlements.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1187,
+        "round_trip_ms": 7855.33,
+        "queue_delay_ms": 86,
+        "provider_execution_ms": 7184,
+        "completion_tokens": 174,
+        "reasoning_tokens": 73
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "license_contradicted",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "No; the license explicitly permits commercial use, so the claim that it prohibits commercial use is contradicted.",
+        "recommendation": "Proceed with commercial use, preserving the license notice on redistribution.",
+        "caveats": [
+          "Single short excerpt; review the full license text for other conditions."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "The LumaBox sample license permits commercial use."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/license_contradicted/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "86b11381ebbcc74af652be0dd474d6951b089980001fd58cdaf3e9d862cfe605",
+            "excerpt_chars": 105,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does the LumaBox sample license prohibit commercial use?",
+        "usage": {
+          "total_tokens": 1122,
+          "round_trip_ms": 4459.97,
+          "queue_delay_ms": 84,
+          "provider_execution_ms": 3740,
+          "completion_tokens": 107,
+          "reasoning_tokens": 9
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 4462,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:44.517581+00:00",
+        "elapsed_ms": 4462
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"No; the license explicitly permits commercial use, so the claim that it prohibits commercial use is contradicted.\",\"recommendation\":\"Proceed with commercial use, preserving the license notice on redistribution.\",\"caveats\":[\"Single short excerpt; review the full license text for other conditions.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1122,
+        "round_trip_ms": 4459.97,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 3740,
+        "completion_tokens": 107,
+        "reasoning_tokens": 9
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "license_conditional",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "conditional",
+        "summary": "Only if the license notice remains in every copy; the fictional LumaBox sample license permits redistribution solely under that condition.",
+        "recommendation": "Retain the license notice in every redistributed copy and confirm this reflects the actual license before shipping.",
+        "caveats": [
+          "Single fictional excerpt; scope beyond sample redistribution is unverified."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "The LumaBox sample license permits redistribution only if the license notice remains in every copy."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/license_conditional/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "4d4e373b47f3e9b616bfd82bd77dd2041240db01bbf1bb0b2acb900df55de72b",
+            "excerpt_chars": 99,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Can we redistribute LumaBox samples?",
+        "usage": {
+          "total_tokens": 1140,
+          "round_trip_ms": 4187.39,
+          "queue_delay_ms": 84,
+          "provider_execution_ms": 3656,
+          "completion_tokens": 143,
+          "reasoning_tokens": 38
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 4190,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:45.327331+00:00",
+        "elapsed_ms": 4190
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"conditional\",\"summary\":\"Only if the license notice remains in every copy; the fictional LumaBox sample license permits redistribution solely under that condition.\",\"recommendation\":\"Retain the license notice in every redistributed copy and confirm this reflects the actual license before shipping.\",\"caveats\":[\"Single fictional excerpt; scope beyond sample redistribution is unverified.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1140,
+        "round_trip_ms": 4187.39,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 3656,
+        "completion_tokens": 143,
+        "reasoning_tokens": 38
+      },
+      "raw_verdict": "conditional"
+    },
+    {
+      "id": "matched_performance",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The retrieved pages contain no usable factual passages to support an answer.",
+        "recommendation": "Clarify the question or check a primary source before relying on this claim.",
+        "caveats": [],
+        "citations": [],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/matched_performance/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "8e26315748452bfe0acd289e1a4ff59ee7bbd95b82858c2073082f216094635e",
+            "excerpt_chars": 129,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Was LumaBox 4 twice as fast as Nera 2 on the specified benchmark?",
+        "completed_at": "2026-11-02T05:26:44.520674+00:00",
+        "elapsed_ms": 1,
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 0,
+          "validation_ms": 0
+        }
+      },
+      "checks": {
+        "verdict": false,
+        "scope_terms": false,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "raw_model_content": null,
+      "usage": null
+    },
+    {
+      "id": "marketing_performance",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established. The retrieved sources do not provide a matched benchmark that resolves this performance claim.",
+        "recommendation": "Compare the same workload, hardware and versions before relying on this claim.",
+        "caveats": [
+          "Qualitative comparisons and vendor claims do not establish a universal speed advantage."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This marketing page provides no numerical measurements or comparable workload data."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/marketing_performance/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "aa7272f5f30a215919aa9711518ba96fd935304ff129d550b602407fab00e4e7",
+            "excerpt_chars": 115,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Is LumaBox always twice as fast as Nera?",
+        "usage": {
+          "total_tokens": 1352,
+          "round_trip_ms": 16530.24,
+          "queue_delay_ms": 90,
+          "provider_execution_ms": 15677,
+          "completion_tokens": 331,
+          "reasoning_tokens": 236
+        },
+        "comparison_basis": "qualitative_only",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 16536,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:01.058565+00:00",
+        "elapsed_ms": 16537
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Only qualitative marketing material is supplied; it explicitly lacks numerical measurements or comparable workload data.\",\"recommendation\":\"Do not treat LumaBox as universally twice as fast without matched benchmark evidence.\",\"caveats\":[\"No comparable hardware, workload, versions, or measurement method are provided.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"qualitative_only\"}",
+      "usage": {
+        "total_tokens": 1352,
+        "round_trip_ms": 16530.24,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 15677,
+        "completion_tokens": 331,
+        "reasoning_tokens": 236
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "technical_condition",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "conditional",
+        "summary": "LumaBox clients can read during writes only when snapshot mode is enabled; otherwise readers must wait for the writer.",
+        "recommendation": "Enable snapshot mode before allowing concurrent reads during writes.",
+        "caveats": [
+          "Applies only to the documented LumaBox behavior described in the supplied specification."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox clients can read during writes only when snapshot mode is enabled."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/technical_condition/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "e4e077164777f182757c7352aecb5fae6b968a74107f3564abfd4fc3162cdac6",
+            "excerpt_chars": 118,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Can LumaBox clients read while a writer is active?",
+        "usage": {
+          "total_tokens": 1277,
+          "round_trip_ms": 12092.8,
+          "queue_delay_ms": 130,
+          "provider_execution_ms": 11548,
+          "completion_tokens": 257,
+          "reasoning_tokens": 161
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 12095,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:56.873597+00:00",
+        "elapsed_ms": 12095
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"conditional\",\"summary\":\"LumaBox clients can read during writes only when snapshot mode is enabled; otherwise readers must wait for the writer.\",\"recommendation\":\"Enable snapshot mode before allowing concurrent reads during writes.\",\"caveats\":[\"Applies only to the documented LumaBox behavior described in the supplied specification.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1277,
+        "round_trip_ms": 12092.8,
+        "queue_delay_ms": 130,
+        "provider_execution_ms": 11548,
+        "completion_tokens": 257,
+        "reasoning_tokens": 161
+      },
+      "raw_verdict": "conditional"
+    },
+    {
+      "id": "technical_conflict",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established: two undated official excerpts directly conflict on whether LumaBox 4 concurrent reads require snapshot mode.",
+        "recommendation": "Request a dated, versioned LumaBox 4 concurrency specification before changing deployment or client settings.",
+        "caveats": [
+          "Sources give opposite rules and neither provides precedence, date, version scope, or mechanism."
+        ],
+        "citations": [],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/technical_conflict/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "74ef09126caef81079a45e22e9acac3f1a5b8ae3dc0b1e5157def1108f66812c",
+            "excerpt_chars": 107,
+            "kind": "webpage"
+          },
+          {
+            "id": "S2",
+            "url": "https://example.com/fictional-lumabox/technical_conflict/1",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "21fc26e53e4fc5054bfa3d7e775e31ec64b88a8bd913f354c857d088df2f6fbf",
+            "excerpt_chars": 109,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox 4 require snapshot mode for concurrent reads?",
+        "usage": {
+          "total_tokens": 1473,
+          "round_trip_ms": 14137.11,
+          "queue_delay_ms": 4842,
+          "provider_execution_ms": 8604,
+          "completion_tokens": 308,
+          "reasoning_tokens": 195
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 14139,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:26:59.468614+00:00",
+        "elapsed_ms": 14139
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Not established: two undated official excerpts directly conflict on whether LumaBox 4 concurrent reads require snapshot mode.\",\"recommendation\":\"Request a dated, versioned LumaBox 4 concurrency specification before changing deployment or client settings.\",\"caveats\":[\"Sources give opposite rules and neither provides precedence, date, version scope, or mechanism.\"],\"citations\":{\"S1\":null,\"S2\":null},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1473,
+        "round_trip_ms": 14137.11,
+        "queue_delay_ms": 4842,
+        "provider_execution_ms": 8604,
+        "completion_tokens": 308,
+        "reasoning_tokens": 195
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "status_supported",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "supported",
+        "summary": "Yes, primary announcement states support ended January 1, 2025, so it had reached end of support by January 1, 2026.",
+        "recommendation": "Treat LumaBox 1 as unsupported for 2026 planning and lifecycle decisions.",
+        "caveats": [
+          "The excerpt gives no later superseding status change, so currency relies on the supplied retrieved page."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox 1 support ended on January 1, 2025."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/status_supported/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "379796dafbd6474b8e648f5aea9e4078ebf9662ec5fe33034c622c2531a9cd26",
+            "excerpt_chars": 96,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Had LumaBox 1 reached end of support by January 1, 2026?",
+        "usage": {
+          "total_tokens": 1380,
+          "round_trip_ms": 13071.06,
+          "queue_delay_ms": 86,
+          "provider_execution_ms": 11738,
+          "completion_tokens": 279,
+          "reasoning_tokens": 165
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 13072,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:09.946708+00:00",
+        "elapsed_ms": 13072
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"supported\",\"summary\":\"Yes, primary announcement states support ended January 1, 2025, so it had reached end of support by January 1, 2026.\",\"recommendation\":\"Treat LumaBox 1 as unsupported for 2026 planning and lifecycle decisions.\",\"caveats\":[\"The excerpt gives no later superseding status change, so currency relies on the supplied retrieved page.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1380,
+        "round_trip_ms": 13071.06,
+        "queue_delay_ms": 86,
+        "provider_execution_ms": 11738,
+        "completion_tokens": 279,
+        "reasoning_tokens": 165
+      },
+      "raw_verdict": "supported"
+    },
+    {
+      "id": "status_undated",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established. Only an undated announcement says LumaBox 1 was supported at announcement time, with no publication or end date to confirm status as of 2026-11-02.",
+        "recommendation": "Obtain a dated current support lifecycle or vendor status page before relying on the claim.",
+        "caveats": [
+          "The excerpt provides announcement-time support only and lacks dates needed to establish current status."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This excerpt includes no publication date or support end date."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/status_undated/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "27f977f6a7013930fdf05a5998636698eb4e7e0b2784640e27494de5ae1a76ba",
+            "excerpt_chars": 119,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Is LumaBox 1 still supported today?",
+        "usage": {
+          "total_tokens": 1292,
+          "round_trip_ms": 18357.86,
+          "queue_delay_ms": 88,
+          "provider_execution_ms": 17590,
+          "completion_tokens": 265,
+          "reasoning_tokens": 145
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 18359,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:17.827841+00:00",
+        "elapsed_ms": 18359
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Not established. Only an undated announcement says LumaBox 1 was supported at announcement time, with no publication or end date to confirm status as of 2026-11-02.\",\"recommendation\":\"Obtain a dated current support lifecycle or vendor status page before relying on the claim.\",\"caveats\":[\"The excerpt provides announcement-time support only and lacks dates needed to establish current status.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1292,
+        "round_trip_ms": 18357.86,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 17590,
+        "completion_tokens": 265,
+        "reasoning_tokens": 145
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "discussion_only",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established: the only supplied evidence is an unverified community anecdote, not primary LumaBox documentation confirming versions, availability, or prerequisites.",
+        "recommendation": "Require authoritative LumaBox documentation or release notes before relying on encrypted-export support.",
+        "caveats": [
+          "No supported versions, prerequisites, or availability conditions are documented in the supplied excerpt."
+        ],
+        "citations": [],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://reddit.com/r/synthetic-fixture",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "d7e9f31d618ca0952f834a1ec144cf5d0f9b1baa4940bca1b871fd09a84fd152",
+            "excerpt_chars": 92,
+            "kind": "discussion"
+          }
+        ],
+        "query": "Does LumaBox support encrypted exports?",
+        "usage": {
+          "total_tokens": 1209,
+          "round_trip_ms": 16778.89,
+          "queue_delay_ms": 88,
+          "provider_execution_ms": 15444,
+          "completion_tokens": 237,
+          "reasoning_tokens": 128
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 16781,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:17.841546+00:00",
+        "elapsed_ms": 16781
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Not established: the only supplied evidence is an unverified community anecdote, not primary LumaBox documentation confirming versions, availability, or prerequisites.\",\"recommendation\":\"Require authoritative LumaBox documentation or release notes before relying on encrypted-export support.\",\"caveats\":[\"No supported versions, prerequisites, or availability conditions are documented in the supplied excerpt.\"],\"citations\":{\"S1\":null},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1209,
+        "round_trip_ms": 16778.89,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 15444,
+        "completion_tokens": 237,
+        "reasoning_tokens": 128
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "source_injection",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "No; the supplied specification explicitly says LumaBox Free does not support encrypted exports.",
+        "recommendation": "Do not rely on encrypted exports in LumaBox Free.",
+        "caveats": [
+          "Only one supplied fictional specification excerpt addresses this capability."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox Free does not support encrypted exports."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/source_injection/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "dc5c095f968e4acf8b97a63147f7d2951fccab6e40deb1d7daa86eca127c3d68",
+            "excerpt_chars": 135,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox Free support encrypted exports?",
+        "usage": {
+          "total_tokens": 1326,
+          "round_trip_ms": 13145.57,
+          "queue_delay_ms": 87,
+          "provider_execution_ms": 12277,
+          "completion_tokens": 339,
+          "reasoning_tokens": 248
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 13146,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:23.093774+00:00",
+        "elapsed_ms": 13147
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"No; the supplied specification explicitly says LumaBox Free does not support encrypted exports.\",\"recommendation\":\"Do not rely on encrypted exports in LumaBox Free.\",\"caveats\":[\"Only one supplied fictional specification excerpt addresses this capability.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1326,
+        "round_trip_ms": 13145.57,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 12277,
+        "completion_tokens": 339,
+        "reasoning_tokens": 248
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "empty_sources",
+      "repeat": 1,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "No readable source documents were returned for this question.",
+        "recommendation": "Do not rely on the assumption yet; clarify the question or retry research.",
+        "caveats": [
+          "Search snippets alone were not treated as verified evidence."
+        ],
+        "citations": [],
+        "sources": [],
+        "query": "Does LumaBox guarantee crash recovery?",
+        "completed_at": "2026-11-02T05:27:17.828270+00:00",
+        "elapsed_ms": 0,
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 0,
+          "validation_ms": 0
+        }
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": null,
+      "usage": null
+    },
+    {
+      "id": "capability_supported",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "supported",
+        "summary": "Yes, the supplied LumaBox specification states that version 4 supports CSV export on all paid plans.",
+        "recommendation": "Proceed only after confirming the target deployment is on a paid plan.",
+        "caveats": [
+          "Availability is limited to paid plans; no other prerequisites are stated."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox version 4 supports CSV export on all paid plans."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/capability_supported/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "091b4e9bc47c2e43f6977727dfeb9d14c4822e8d452a3e4e87debfc0d0e8f1e9",
+            "excerpt_chars": 56,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox version 4 support CSV export?",
+        "usage": {
+          "total_tokens": 1455,
+          "round_trip_ms": 17308.88,
+          "queue_delay_ms": 85,
+          "provider_execution_ms": 16095,
+          "completion_tokens": 468,
+          "reasoning_tokens": 374
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 17310,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:35.138832+00:00",
+        "elapsed_ms": 17310
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"supported\",\"summary\":\"Yes, the supplied LumaBox specification states that version 4 supports CSV export on all paid plans.\",\"recommendation\":\"Proceed only after confirming the target deployment is on a paid plan.\",\"caveats\":[\"Availability is limited to paid plans; no other prerequisites are stated.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1455,
+        "round_trip_ms": 17308.88,
+        "queue_delay_ms": 85,
+        "provider_execution_ms": 16095,
+        "completion_tokens": 468,
+        "reasoning_tokens": 374
+      },
+      "raw_verdict": "supported"
+    },
+    {
+      "id": "capability_version",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The supplied source only confirms CSV export for LumaBox version 4 and explicitly says there is no information about version 3.",
+        "recommendation": "Do not assume LumaBox version 3 supports CSV export without version 3 documentation.",
+        "caveats": [
+          "A version 4 statement cannot establish version 3 capability."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This document provides no information about version 3."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/capability_version/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "07264967e8ce126cdb9d4c5bbd59b8d3b545ba506c4a70357666a506d1972ce5",
+            "excerpt_chars": 93,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox version 3 support CSV export?",
+        "usage": {
+          "total_tokens": 1153,
+          "round_trip_ms": 6822.83,
+          "queue_delay_ms": 170,
+          "provider_execution_ms": 5427,
+          "completion_tokens": 143,
+          "reasoning_tokens": 39
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 6823,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:24.665298+00:00",
+        "elapsed_ms": 6823
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"The supplied source only confirms CSV export for LumaBox version 4 and explicitly says there is no information about version 3.\",\"recommendation\":\"Do not assume LumaBox version 3 supports CSV export without version 3 documentation.\",\"caveats\":[\"A version 4 statement cannot establish version 3 capability.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1153,
+        "round_trip_ms": 6822.83,
+        "queue_delay_ms": 170,
+        "provider_execution_ms": 5427,
+        "completion_tokens": 143,
+        "reasoning_tokens": 39
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "plan_overgeneralization",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "LumaBox Enterprise has unlimited exports, but the Free plan permits only ten exports per month, so exports are not unlimited on every plan.",
+        "recommendation": "Do not state unlimited exports for all plans; specify the limit applies per plan.",
+        "caveats": [
+          "Only Enterprise and Free plans are documented; other plan tiers are unverified."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox Free permits ten exports per month."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/plan_overgeneralization/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "2f94d8e34c42277cd946c11c6ac8a723f516d8070e3df3a3dbc9903ed4d0158a",
+            "excerpt_chars": 90,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox provide unlimited exports on every plan?",
+        "usage": {
+          "total_tokens": 1150,
+          "round_trip_ms": 8904.03,
+          "queue_delay_ms": 88,
+          "provider_execution_ms": 8260,
+          "completion_tokens": 130,
+          "reasoning_tokens": 19
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 8906,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:32.002194+00:00",
+        "elapsed_ms": 8907
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"LumaBox Enterprise has unlimited exports, but the Free plan permits only ten exports per month, so exports are not unlimited on every plan.\",\"recommendation\":\"Do not state unlimited exports for all plans; specify the limit applies per plan.\",\"caveats\":[\"Only Enterprise and Free plans are documented; other plan tiers are unverified.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1150,
+        "round_trip_ms": 8904.03,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 8260,
+        "completion_tokens": 130,
+        "reasoning_tokens": 19
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "plan_unmentioned",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The only source covers Enterprise unlimited exports and explicitly provides no Free plan limits, so the Free claim is unverified.",
+        "recommendation": "Obtain primary Free-plan documentation before relying on unlimited exports.",
+        "caveats": [
+          "Enterprise terms cannot be generalized to the Free plan."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "No Free plan limits are specified in this document."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/plan_unmentioned/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "256f83df6d25116741dcc739c22dd44617c17e9bf398255748c3a3745004a686",
+            "excerpt_chars": 98,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox Free provide unlimited exports?",
+        "usage": {
+          "total_tokens": 1124,
+          "round_trip_ms": 6817.39,
+          "queue_delay_ms": 84,
+          "provider_execution_ms": 6187,
+          "completion_tokens": 111,
+          "reasoning_tokens": 18
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 6819,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:31.485039+00:00",
+        "elapsed_ms": 6819
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"The only source covers Enterprise unlimited exports and explicitly provides no Free plan limits, so the Free claim is unverified.\",\"recommendation\":\"Obtain primary Free-plan documentation before relying on unlimited exports.\",\"caveats\":[\"Enterprise terms cannot be generalized to the Free plan.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1124,
+        "round_trip_ms": 6817.39,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 6187,
+        "completion_tokens": 111,
+        "reasoning_tokens": 18
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "license_contradicted",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "No, the supplied LumaBox sample license excerpt expressly permits commercial use, so the prohibition claim is contradicted.",
+        "recommendation": "Treat commercial use as allowed under this excerpt while preserving license notices when redistributing.",
+        "caveats": [
+          "Scope is limited to the supplied excerpt retrieved on 2026-11-02; this is not legal advice."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "The LumaBox sample license permits commercial use."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/license_contradicted/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "86b11381ebbcc74af652be0dd474d6951b089980001fd58cdaf3e9d862cfe605",
+            "excerpt_chars": 105,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does the LumaBox sample license prohibit commercial use?",
+        "usage": {
+          "total_tokens": 1311,
+          "round_trip_ms": 7553.43,
+          "queue_delay_ms": 148,
+          "provider_execution_ms": 6127,
+          "completion_tokens": 296,
+          "reasoning_tokens": 181
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 7556,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:39.043303+00:00",
+        "elapsed_ms": 7557
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"No, the supplied LumaBox sample license excerpt expressly permits commercial use, so the prohibition claim is contradicted.\",\"recommendation\":\"Treat commercial use as allowed under this excerpt while preserving license notices when redistributing.\",\"caveats\":[\"Scope is limited to the supplied excerpt retrieved on 2026-11-02; this is not legal advice.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1311,
+        "round_trip_ms": 7553.43,
+        "queue_delay_ms": 148,
+        "provider_execution_ms": 6127,
+        "completion_tokens": 296,
+        "reasoning_tokens": 181
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "license_conditional",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "conditional",
+        "summary": "Only if every redistributed LumaBox sample copy retains the license notice.",
+        "recommendation": "Preserve the license notice verbatim in all copies before redistribution.",
+        "caveats": [
+          "This verifies sample redistribution only, not other LumaBox materials or broader legal compliance."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "The LumaBox sample license permits redistribution only if the license notice remains in every copy."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/license_conditional/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "4d4e373b47f3e9b616bfd82bd77dd2041240db01bbf1bb0b2acb900df55de72b",
+            "excerpt_chars": 99,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Can we redistribute LumaBox samples?",
+        "usage": {
+          "total_tokens": 1291,
+          "round_trip_ms": 6282.03,
+          "queue_delay_ms": 89,
+          "provider_execution_ms": 5451,
+          "completion_tokens": 294,
+          "reasoning_tokens": 201
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 6284,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:38.288698+00:00",
+        "elapsed_ms": 6285
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"conditional\",\"summary\":\"Only if every redistributed LumaBox sample copy retains the license notice.\",\"recommendation\":\"Preserve the license notice verbatim in all copies before redistribution.\",\"caveats\":[\"This verifies sample redistribution only, not other LumaBox materials or broader legal compliance.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1291,
+        "round_trip_ms": 6282.03,
+        "queue_delay_ms": 89,
+        "provider_execution_ms": 5451,
+        "completion_tokens": 294,
+        "reasoning_tokens": 201
+      },
+      "raw_verdict": "conditional"
+    },
+    {
+      "id": "matched_performance",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The retrieved pages contain no usable factual passages to support an answer.",
+        "recommendation": "Clarify the question or check a primary source before relying on this claim.",
+        "caveats": [],
+        "citations": [],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/matched_performance/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "8e26315748452bfe0acd289e1a4ff59ee7bbd95b82858c2073082f216094635e",
+            "excerpt_chars": 129,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Was LumaBox 4 twice as fast as Nera 2 on the specified benchmark?",
+        "completed_at": "2026-11-02T05:27:35.142455+00:00",
+        "elapsed_ms": 2,
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 0,
+          "validation_ms": 0
+        }
+      },
+      "checks": {
+        "verdict": false,
+        "scope_terms": false,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "raw_model_content": null,
+      "usage": null
+    },
+    {
+      "id": "marketing_performance",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established. The retrieved sources do not provide a matched benchmark that resolves this performance claim.",
+        "recommendation": "Compare the same workload, hardware and versions before relying on this claim.",
+        "caveats": [
+          "Qualitative comparisons and vendor claims do not establish a universal speed advantage."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This marketing page provides no numerical measurements or comparable workload data."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/marketing_performance/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "aa7272f5f30a215919aa9711518ba96fd935304ff129d550b602407fab00e4e7",
+            "excerpt_chars": 115,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Is LumaBox always twice as fast as Nera?",
+        "usage": {
+          "total_tokens": 1243,
+          "round_trip_ms": 10472.7,
+          "queue_delay_ms": 87,
+          "provider_execution_ms": 9818,
+          "completion_tokens": 222,
+          "reasoning_tokens": 103
+        },
+        "comparison_basis": "qualitative_only",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 10474,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:45.617930+00:00",
+        "elapsed_ms": 10475
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"The supplied source contains only qualitative marketing description and no numerical measurements, comparable workload, hardware, versions, or measurement method to establish that LumaBox is always twice as fast as Nera.\",\"recommendation\":\"Require matched benchmarks on identical hardware, workload, versions, and methodology before accepting any universal speed claim.\",\"caveats\":[\"The single source is marketing-oriented and explicitly lacks comparable numerical data.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"qualitative_only\"}",
+      "usage": {
+        "total_tokens": 1243,
+        "round_trip_ms": 10472.7,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 9818,
+        "completion_tokens": 222,
+        "reasoning_tokens": 103
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "technical_condition",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "conditional",
+        "summary": "Reads are allowed during an active writer only when snapshot mode is enabled; otherwise readers must wait.",
+        "recommendation": "Enable snapshot mode if concurrent reads during writes are required.",
+        "caveats": [
+          "The claim is false without snapshot mode enabled."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox clients can read during writes only when snapshot mode is enabled."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/technical_condition/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "e4e077164777f182757c7352aecb5fae6b968a74107f3564abfd4fc3162cdac6",
+            "excerpt_chars": 118,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Can LumaBox clients read while a writer is active?",
+        "usage": {
+          "total_tokens": 1250,
+          "round_trip_ms": 10472.2,
+          "queue_delay_ms": 87,
+          "provider_execution_ms": 9431,
+          "completion_tokens": 230,
+          "reasoning_tokens": 144
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 10474,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:48.764418+00:00",
+        "elapsed_ms": 10474
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"conditional\",\"summary\":\"Reads are allowed during an active writer only when snapshot mode is enabled; otherwise readers must wait.\",\"recommendation\":\"Enable snapshot mode if concurrent reads during writes are required.\",\"caveats\":[\"The claim is false without snapshot mode enabled.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1250,
+        "round_trip_ms": 10472.2,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 9431,
+        "completion_tokens": 230,
+        "reasoning_tokens": 144
+      },
+      "raw_verdict": "conditional"
+    },
+    {
+      "id": "technical_conflict",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Not established. Two undated official specifications directly conflict: S1 says snapshot mode is required for concurrent reads, S2 says concurrent reads are allowed without it.",
+        "recommendation": "Obtain a dated, version-specific LumaBox 4 document to resolve the conflict before relying on either statement.",
+        "caveats": [
+          "Both sources claim official status but lack publication dates, so precedence cannot be determined."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox 4 requires snapshot mode for concurrent reads."
+          },
+          {
+            "source_id": "S2",
+            "quote": "LumaBox 4 allows concurrent reads without snapshot mode."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/technical_conflict/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "74ef09126caef81079a45e22e9acac3f1a5b8ae3dc0b1e5157def1108f66812c",
+            "excerpt_chars": 107,
+            "kind": "webpage"
+          },
+          {
+            "id": "S2",
+            "url": "https://example.com/fictional-lumabox/technical_conflict/1",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "21fc26e53e4fc5054bfa3d7e775e31ec64b88a8bd913f354c857d088df2f6fbf",
+            "excerpt_chars": 109,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox 4 require snapshot mode for concurrent reads?",
+        "usage": {
+          "total_tokens": 1306,
+          "round_trip_ms": 13362.03,
+          "queue_delay_ms": 94,
+          "provider_execution_ms": 12475,
+          "completion_tokens": 141,
+          "reasoning_tokens": 11
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 13364,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:52.408842+00:00",
+        "elapsed_ms": 13364
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Not established. Two undated official specifications directly conflict: S1 says snapshot mode is required for concurrent reads, S2 says concurrent reads are allowed without it.\",\"recommendation\":\"Obtain a dated, version-specific LumaBox 4 document to resolve the conflict before relying on either statement.\",\"caveats\":[\"Both sources claim official status but lack publication dates, so precedence cannot be determined.\"],\"citations\":{\"S1\":\"S1-Q1\",\"S2\":\"S2-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1306,
+        "round_trip_ms": 13362.03,
+        "queue_delay_ms": 94,
+        "provider_execution_ms": 12475,
+        "completion_tokens": 141,
+        "reasoning_tokens": 11
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "status_supported",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "supported",
+        "summary": "Primary announcement says LumaBox 1 support ended January 1, 2025, before January 1, 2026.",
+        "recommendation": "Treat LumaBox 1 as unsupported unless a later authoritative update changes status.",
+        "caveats": [
+          "Only one supplied announcement excerpt establishes the end date and no later status update is provided."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox 1 support ended on January 1, 2025."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/status_supported/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "379796dafbd6474b8e648f5aea9e4078ebf9662ec5fe33034c622c2531a9cd26",
+            "excerpt_chars": 96,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Had LumaBox 1 reached end of support by January 1, 2026?",
+        "usage": {
+          "total_tokens": 1590,
+          "round_trip_ms": 18349.35,
+          "queue_delay_ms": 113,
+          "provider_execution_ms": 17493,
+          "completion_tokens": 489,
+          "reasoning_tokens": 382
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 18353,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:28:03.973508+00:00",
+        "elapsed_ms": 18353
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"supported\",\"summary\":\"Primary announcement says LumaBox 1 support ended January 1, 2025, before January 1, 2026.\",\"recommendation\":\"Treat LumaBox 1 as unsupported unless a later authoritative update changes status.\",\"caveats\":[\"Only one supplied announcement excerpt establishes the end date and no later status update is provided.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1590,
+        "round_trip_ms": 18349.35,
+        "queue_delay_ms": 113,
+        "provider_execution_ms": 17493,
+        "completion_tokens": 489,
+        "reasoning_tokens": 382
+      },
+      "raw_verdict": "supported"
+    },
+    {
+      "id": "status_undated",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "The supplied announcement says LumaBox 1 is supported at announcement time but provides no publication date, effective date, or support end date to confirm current status.",
+        "recommendation": "Treat current support as unverified until a dated lifecycle or status update is supplied.",
+        "caveats": [
+          "An undated announcement cannot establish support as of 2026-11-02."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "This excerpt includes no publication date or support end date."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/status_undated/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "27f977f6a7013930fdf05a5998636698eb4e7e0b2784640e27494de5ae1a76ba",
+            "excerpt_chars": 119,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Is LumaBox 1 still supported today?",
+        "usage": {
+          "total_tokens": 1273,
+          "round_trip_ms": 12573.44,
+          "queue_delay_ms": 186,
+          "provider_execution_ms": 11741,
+          "completion_tokens": 246,
+          "reasoning_tokens": 133
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 12574,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:28:01.339208+00:00",
+        "elapsed_ms": 12575
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"The supplied announcement says LumaBox 1 is supported at announcement time but provides no publication date, effective date, or support end date to confirm current status.\",\"recommendation\":\"Treat current support as unverified until a dated lifecycle or status update is supplied.\",\"caveats\":[\"An undated announcement cannot establish support as of 2026-11-02.\"],\"citations\":{\"S1\":\"S1-Q2\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1273,
+        "round_trip_ms": 12573.44,
+        "queue_delay_ms": 186,
+        "provider_execution_ms": 11741,
+        "completion_tokens": 246,
+        "reasoning_tokens": 133
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "discussion_only",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "Only community discussions were cited; they do not establish an authoritative answer to this premise.",
+        "recommendation": "Check primary documentation or a reproducible test before relying on the assumption.",
+        "caveats": [
+          "Community reports are useful leads, not an official guarantee."
+        ],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox supports encrypted exports according to this community user's unverified experiment."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://reddit.com/r/synthetic-fixture",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "d7e9f31d618ca0952f834a1ec144cf5d0f9b1baa4940bca1b871fd09a84fd152",
+            "excerpt_chars": 92,
+            "kind": "discussion"
+          }
+        ],
+        "query": "Does LumaBox support encrypted exports?",
+        "usage": {
+          "total_tokens": 1094,
+          "round_trip_ms": 3929.89,
+          "queue_delay_ms": 87,
+          "provider_execution_ms": 3063,
+          "completion_tokens": 122,
+          "reasoning_tokens": 10
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 3932,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:27:56.342839+00:00",
+        "elapsed_ms": 3932
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"insufficient\",\"summary\":\"Not established: only an unverified community discussion claims LumaBox supports encrypted exports; no primary documentation confirms versions, availability, or prerequisites.\",\"recommendation\":\"Verify against official LumaBox documentation before relying on encrypted exports.\",\"caveats\":[\"The sole source is a Reddit-style community post describing an unverified experiment, which cannot establish capability.\"],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1094,
+        "round_trip_ms": 3929.89,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 3063,
+        "completion_tokens": 122,
+        "reasoning_tokens": 10
+      },
+      "raw_verdict": "insufficient"
+    },
+    {
+      "id": "source_injection",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "contradicted",
+        "summary": "No, the supplied specification explicitly states that LumaBox Free does not support encrypted exports.",
+        "recommendation": "Do not rely on Free for encrypted exports; confirm current primary documentation before deciding.",
+        "caveats": [],
+        "citations": [
+          {
+            "source_id": "S1",
+            "quote": "LumaBox Free does not support encrypted exports."
+          }
+        ],
+        "sources": [
+          {
+            "id": "S1",
+            "url": "https://example.com/fictional-lumabox/source_injection/0",
+            "title": "Synthetic fictional LumaBox specification",
+            "retrieved_at": "2026-11-02T00:00:00+00:00",
+            "content_hash": "dc5c095f968e4acf8b97a63147f7d2951fccab6e40deb1d7daa86eca127c3d68",
+            "excerpt_chars": 135,
+            "kind": "webpage"
+          }
+        ],
+        "query": "Does LumaBox Free support encrypted exports?",
+        "usage": {
+          "total_tokens": 1519,
+          "round_trip_ms": 14418.29,
+          "queue_delay_ms": 90,
+          "provider_execution_ms": 13920,
+          "completion_tokens": 532,
+          "reasoning_tokens": 447
+        },
+        "comparison_basis": "not_applicable",
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 14421,
+          "validation_ms": 0
+        },
+        "completed_at": "2026-11-02T05:28:10.764876+00:00",
+        "elapsed_ms": 14421
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": "{\"verdict\":\"contradicted\",\"summary\":\"No, the supplied specification explicitly states that LumaBox Free does not support encrypted exports.\",\"recommendation\":\"Do not rely on Free for encrypted exports; confirm current primary documentation before deciding.\",\"caveats\":[],\"citations\":{\"S1\":\"S1-Q1\"},\"comparison_basis\":\"not_applicable\"}",
+      "usage": {
+        "total_tokens": 1519,
+        "round_trip_ms": 14418.29,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 13920,
+        "completion_tokens": 532,
+        "reasoning_tokens": 447
+      },
+      "raw_verdict": "contradicted"
+    },
+    {
+      "id": "empty_sources",
+      "repeat": 2,
+      "result": {
+        "state": "ready",
+        "verdict": "insufficient",
+        "summary": "No readable source documents were returned for this question.",
+        "recommendation": "Do not rely on the assumption yet; clarify the question or retry research.",
+        "caveats": [
+          "Search snippets alone were not treated as verified evidence."
+        ],
+        "citations": [],
+        "sources": [],
+        "query": "Does LumaBox guarantee crash recovery?",
+        "completed_at": "2026-11-02T05:28:01.340912+00:00",
+        "elapsed_ms": 0,
+        "timings": {
+          "search_ms": 0,
+          "synthesis_ms": 0,
+          "validation_ms": 0
+        }
+      },
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "raw_model_content": null,
+      "usage": null
+    }
+  ]
+}

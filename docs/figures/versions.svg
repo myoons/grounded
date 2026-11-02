@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="690" viewBox="0 0 1080 690" role="img" aria-labelledby="title description">
+<title id="title">Old work cannot overwrite new state.</title><desc id="description">Schematic races after successful generation changes. Pause must first drain retained audio; failed drain preserves the epoch for recovery. After epoch advance stale uploads are rejected. Claim revision changes reject obsolete research results.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 04</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Old work cannot overwrite new state.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Two guards protect different things: capture epoch and claim revision.</text>
+<path d="M40 642 L1040 642" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="668" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<rect x="40" y="155" width="1000" height="190" rx="12" fill="#f5f7fa" stroke="#ccd6df" stroke-width="1"/>
+<text x="60" y="188" font-size="21" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">A  Capture epoch</text>
+<text x="70" y="235" font-size="19" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Audio begins · epoch 7</text>
+<path d="M340 229 L480 229" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="490" y="235" font-size="18" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">Pause</text>
+<path d="M655 229 L735 229" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="750" y="235" font-size="19" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Current epoch 8</text>
+<path d="M190 258 L190 300 L750 300" fill="none" stroke="#b34d3d" stroke-width="2" marker-end="url(#arrow-red)" stroke-dasharray="7 5"/>
+<text x="360" y="290" font-size="17" fill="#b34d3d" font-weight="400" letter-spacing="0" text-anchor="start">Late audio · epoch 7</text>
+<text x="775" y="306" font-size="18" fill="#b34d3d" font-weight="700" letter-spacing="0" text-anchor="start">REJECT / DISCARD</text>
+<rect x="40" y="370" width="1000" height="190" rx="12" fill="#f5f7fa" stroke="#ccd6df" stroke-width="1"/>
+<text x="60" y="403" font-size="21" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">B  Claim revision</text>
+<text x="70" y="450" font-size="19" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Research begins · rev 2</text>
+<path d="M340 444 L480 444" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="490" y="450" font-size="18" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">Scope changes</text>
+<path d="M655 444 L735 444" fill="none" stroke="#586777" stroke-width="2" marker-end="url(#arrow-muted)"/>
+<text x="750" y="450" font-size="19" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Current revision 3</text>
+<path d="M190 473 L190 515 L750 515" fill="none" stroke="#b34d3d" stroke-width="2" marker-end="url(#arrow-red)" stroke-dasharray="7 5"/>
+<text x="360" y="505" font-size="17" fill="#b34d3d" font-weight="400" letter-spacing="0" text-anchor="start">Late result · rev 2</text>
+<text x="775" y="521" font-size="18" fill="#b34d3d" font-weight="700" letter-spacing="0" text-anchor="start">REJECT / DISCARD</text>
+<text x="40" y="604" font-size="20" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Publish only when session ID, epoch, claim revision and state still match.</text>
+</g></svg>

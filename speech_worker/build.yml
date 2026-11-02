@@ -1,0 +1,28 @@
+name: Build English GPU speech worker
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+concurrency:
+  group: speech-worker-image
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build minimal speech image
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          IMAGE="ghcr.io/${GITHUB_REPOSITORY}:speech-${GITHUB_SHA}"
+          docker build -f speech_worker/Dockerfile -t "$IMAGE" .
+          docker run --rm --entrypoint python3 "$IMAGE" -c 'from speech_worker.engine import validate_model_files; validate_model_files("/models/whisper"); import faster_whisper; import runpod'
+          docker push "$IMAGE"
+          docker inspect --format='{{index .RepoDigests 0}}' "$IMAGE" >> "$GITHUB_STEP_SUMMARY"
+          docker logout ghcr.io

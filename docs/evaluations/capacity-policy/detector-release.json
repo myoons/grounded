@@ -1,0 +1,332 @@
+{
+  "prompt_sha256": "810a725e575ac521ce1105c69f4605c533d5d5c134d6563a97547caaaa48db6b",
+  "dataset_sha256": "ca37785b4679157b826c81e808e85f7eef7b69dbfc7d0da96c5857341153936e",
+  "output_cap": 8,
+  "max_tokens": 3200,
+  "repetitions": 1,
+  "rows": [
+    {
+      "case": "density_5",
+      "scope": "Adapter only; all synthetic utterances supplied directly, not service batching.",
+      "elapsed_ms": 20628,
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL 16 supports row-level security for tenant isolation.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-5-1",
+            "density-5-6",
+            "density-5-7"
+          ],
+          "question": "Does PostgreSQL 16 support row-level security suitable for tenant isolation?",
+          "reason": "Tenant isolation design choice depends on PostgreSQL 16 RLS support.",
+          "conditions": [
+            "PostgreSQL major version is 16"
+          ],
+          "missing_information": [],
+          "topic_key": "postgresql16_rls",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL mode does not work across a network filesystem.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-5-2"
+          ],
+          "question": "Does SQLite WAL mode fail to work across a network filesystem such as NFS?",
+          "reason": "Shared-NFS design cannot use WAL if cross-filesystem support is absent.",
+          "conditions": [
+            "Database accessed over a network filesystem (NFS)"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite_wal_nfs",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Amazon S3 versioning preserves overwritten object versions, supporting accidental-overwrite recovery.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-5-3"
+          ],
+          "question": "Does Amazon S3 versioning preserve overwritten object versions enabling recovery of overwritten objects?",
+          "reason": "Accidental-overwrite recovery plan depends on S3 versioning behavior.",
+          "conditions": [
+            "Versioning enabled on the S3 bucket"
+          ],
+          "missing_information": [],
+          "topic_key": "s3_versioning_overwrite",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "AWS Lambda functions have a maximum execution timeout of 15 minutes.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-5-4"
+          ],
+          "question": "Is the maximum AWS Lambda function execution timeout 15 minutes?",
+          "reason": "20-minute export job requires a different runtime if limit holds.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "lambda_max_timeout",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "GitHub Actions supports encrypted repository secrets for storing a deployment token.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-5-5"
+          ],
+          "question": "Does GitHub Actions support encrypted repository secrets for storing credentials?",
+          "reason": "Deployment token storage plan depends on encrypted secrets support.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "github_actions_secrets",
+          "related_ids": []
+        }
+      ],
+      "score": {
+        "strict_recall": 1,
+        "strict_precision": 1,
+        "evidence_claim_recall": 1,
+        "duplicates": 0,
+        "matched": [
+          "github_secret",
+          "lambda_timeout",
+          "postgres_rls",
+          "s3_versioning",
+          "sqlite_wal"
+        ],
+        "missing": [],
+        "strict_matches_by_output": [
+          [
+            "postgres_rls"
+          ],
+          [
+            "sqlite_wal"
+          ],
+          [
+            "s3_versioning"
+          ],
+          [
+            "lambda_timeout"
+          ],
+          [
+            "github_secret"
+          ]
+        ],
+        "manual_semantic_review_required": true
+      },
+      "usage": {
+        "total_tokens": 2049,
+        "round_trip_ms": 20626.63,
+        "queue_delay_ms": 184,
+        "provider_execution_ms": 19317,
+        "completion_tokens": 581,
+        "reasoning_tokens": 84,
+        "context_segments": 7,
+        "context_candidates": 0,
+        "context_chars": 1181,
+        "omitted_segments": 0
+      }
+    },
+    {
+      "case": "density_8",
+      "scope": "Adapter only; all synthetic utterances supplied directly, not service batching.",
+      "elapsed_ms": 23780,
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL 16 supports row-level security for tenant isolation.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-1",
+            "density-8-9",
+            "density-8-10"
+          ],
+          "question": "Does PostgreSQL 16 support row-level security suitable for tenant isolation?",
+          "reason": "Tenant isolation design depends on PostgreSQL 16 RLS support.",
+          "conditions": [
+            "Tenant isolation design depends on this feature"
+          ],
+          "missing_information": [],
+          "topic_key": "postgres-16-rls",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL mode does not work across a network filesystem.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-2"
+          ],
+          "question": "Does SQLite WAL mode fail to work across a network filesystem such as NFS?",
+          "reason": "Shared-NFS design rules out WAL if this constraint holds.",
+          "conditions": [
+            "Shared-NFS deployment"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-nfs",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Amazon S3 versioning preserves overwritten object versions, enabling recovery from accidental overwrites.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-3"
+          ],
+          "question": "Does Amazon S3 versioning preserve overwritten object versions for recovery?",
+          "reason": "Overwrite recovery plan relies on S3 versioning preserving prior versions.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-versioning-overwrite",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "AWS Lambda functions have a maximum execution timeout of 15 minutes.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-4"
+          ],
+          "question": "Does AWS Lambda limit function execution timeout to a maximum of 15 minutes?",
+          "reason": "20-minute export job needs different runtime if limit is 15 minutes.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "lambda-max-timeout",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "GitHub Actions supports encrypted repository secrets.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-5"
+          ],
+          "question": "Does GitHub Actions support encrypted repository secrets for storing a deployment token?",
+          "reason": "Plan to store deployment token depends on encrypted secrets support.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "github-actions-secrets",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "statement": "The MIT license permits commercial use.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-6"
+          ],
+          "question": "Does the MIT license permit commercial use of the parser in a paid product?",
+          "reason": "Eligibility of MIT-licensed parser for paid product depends on commercial-use permission.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "mit-commercial-use",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "Stripe's payment API expects USD amounts in cents.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-7"
+          ],
+          "question": "Does Stripe's payment API expect USD amounts in cents?",
+          "reason": "Checkout integration conversion requirement depends on Stripe's amount units.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "stripe-amount-cents",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Redis supports setting a TTL on individual keys.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "density-8-8"
+          ],
+          "question": "Does Redis support setting a TTL on individual keys for automatic expiration?",
+          "reason": "Automatic session expiry plan depends on per-key TTL support.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "redis-key-ttl",
+          "related_ids": []
+        }
+      ],
+      "score": {
+        "strict_recall": 1,
+        "strict_precision": 1,
+        "evidence_claim_recall": 1,
+        "duplicates": 0,
+        "matched": [
+          "github_secret",
+          "lambda_timeout",
+          "mit_commercial",
+          "postgres_rls",
+          "redis_ttl",
+          "s3_versioning",
+          "sqlite_wal",
+          "stripe_unit"
+        ],
+        "missing": [],
+        "strict_matches_by_output": [
+          [
+            "postgres_rls"
+          ],
+          [
+            "sqlite_wal"
+          ],
+          [
+            "s3_versioning"
+          ],
+          [
+            "lambda_timeout"
+          ],
+          [
+            "github_secret"
+          ],
+          [
+            "mit_commercial"
+          ],
+          [
+            "stripe_unit"
+          ],
+          [
+            "redis_ttl"
+          ]
+        ],
+        "manual_semantic_review_required": true
+      },
+      "usage": {
+        "total_tokens": 2388,
+        "round_trip_ms": 23779.24,
+        "queue_delay_ms": 94,
+        "provider_execution_ms": 22660,
+        "completion_tokens": 796,
+        "reasoning_tokens": 63,
+        "context_segments": 10,
+        "context_candidates": 0,
+        "context_chars": 1664,
+        "omitted_segments": 0
+      }
+    }
+  ]
+}

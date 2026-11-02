@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760" role="img" aria-labelledby="title description">
+<title id="title">Evidence has scope, not a single score.</title><desc id="description">Automated invariants, real-provider synthetic runs, persistence checks and resource experiments establish different properties. Their counts are not a combined accuracy or reliability percentage.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 10</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Evidence has scope, not a single score.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Read the tested boundary and the remaining gap together.</text>
+<path d="M40 712 L1040 712" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="738" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<text x="40" y="164" font-size="15" fill="#586777" font-weight="700" letter-spacing="1" text-anchor="start">EVIDENCE</text>
+<text x="360" y="164" font-size="15" fill="#586777" font-weight="700" letter-spacing="1" text-anchor="start">ESTABLISHES</text>
+<text x="710" y="164" font-size="15" fill="#586777" font-weight="700" letter-spacing="1" text-anchor="start">DOES NOT ESTABLISH</text>
+<path d="M40 186 L1040 186" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="219" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Unit + failure tests</text>
+<text x="360" y="219" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Boundaries and invariants</text>
+<text x="710" y="219" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Natural speech accuracy</text>
+<path d="M40 252 L1040 252" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="285" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Real-provider fixtures</text>
+<text x="360" y="285" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">ASR → research → finding</text>
+<text x="710" y="285" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Every accent or workload</text>
+<path d="M40 318 L1040 318" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="351" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">SQLite + UI restart</text>
+<text x="360" y="351" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Saved result + links reopen</text>
+<text x="710" y="351" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Arbitrary hardware recovery</text>
+<path d="M40 384 L1040 384" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="417" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Startup / End fixtures</text>
+<text x="360" y="417" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Late inputs close safely</text>
+<text x="710" y="417" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">All OS permission behavior</text>
+<path d="M40 450 L1040 450" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="483" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Capacity stress fixture</text>
+<text x="360" y="483" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Measured bounded sample</text>
+<text x="710" y="483" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Unlimited meeting length</text>
+<path d="M40 516 L1040 516" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="549" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Speech boundary samples</text>
+<text x="360" y="549" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Timing / context trade-offs</text>
+<text x="710" y="549" font-size="18" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">General word accuracy</text>
+<rect x="40" y="636" width="1000" height="64" rx="12" fill="#edf4f9" stroke="#edf4f9" stroke-width="1"/>
+<text x="62" y="676" font-size="19" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">Validation separates deterministic behavior, model quality and device-specific acceptance.</text>
+</g></svg>

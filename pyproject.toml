@@ -1,0 +1,16 @@
+[project]
+name = "roomshift"
+version = "0.1.0"
+description = "Evidence-linked investigation of assumptions in English meetings"
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.3",
+]

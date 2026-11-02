@@ -1,0 +1,8 @@
+*
+!speech_worker/
+!speech_worker/Dockerfile
+!speech_worker/requirements.lock
+!speech_worker/__init__.py
+!speech_worker/download.py
+!speech_worker/engine.py
+!speech_worker/handler.py

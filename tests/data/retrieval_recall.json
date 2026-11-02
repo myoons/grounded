@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "verified_at": "2026-11-02",
+  "scope": "Four purposively selected technical claims. Exact canonical URL and short evidence anchors, frozen after live primary-page verification before search. Not exhaustive relevant-document recall or an answer-quality test.",
+  "cases": [
+    {
+      "id": "sqlite_wal",
+      "question": "Does SQLite WAL work across a network filesystem?",
+      "url": "https://www.sqlite.org/wal.html",
+      "scope": "SQLite WAL current overview, introduced in 3.7.0; shared-memory network filesystem restriction.",
+      "decisive": "WAL does not work over a network filesystem",
+      "condition": "All processes using a database must be on the same host computer"
+    },
+    {
+      "id": "sqlite_fk",
+      "question": "Are SQLite foreign key constraints enabled by default for each database connection?",
+      "url": "https://www.sqlite.org/foreignkeys.html",
+      "scope": "Current SQLite foreign-key guide, support from 3.6.19; default is not a guarantee for custom builds or future releases.",
+      "decisive": "Foreign key constraints are disabled by default",
+      "condition": "must be enabled separately for each database connection"
+    },
+    {
+      "id": "postgres_rls",
+      "question": "Do PostgreSQL 17 table owners bypass row-level security unless FORCE ROW LEVEL SECURITY is enabled?",
+      "url": "https://www.postgresql.org/docs/17/ddl-rowsecurity.html",
+      "scope": "PostgreSQL 17 owner bypass and opt-in force condition; not a claim that all roles obey RLS.",
+      "decisive": "Table owners normally bypass row security",
+      "condition": "FORCE ROW LEVEL SECURITY"
+    },
+    {
+      "id": "s3_size",
+      "question": "What is the maximum Amazon S3 object size using multipart upload?",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html",
+      "scope": "Live AWS multipart upload limits on verification date; units TiB, not single-PUT maximum or historical five-TB claim.",
+      "decisive": "Maximum object size | 48.8 TiB",
+      "condition": "multipart upload core specifications"
+    }
+  ]
+}

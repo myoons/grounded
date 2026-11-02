@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "frozen_before_calls": true,
+  "claims": [
+    {"id":"postgres_rls", "category":"capability", "text":"PostgreSQL 15 supports row-level security, so we can use it for tenant isolation.", "terms":[["postgres"],["16"],["row-level", "row level"]]},
+    {"id":"sqlite_wal", "category":"technical_behavior", "text":"SQLite WAL mode does not work across a network filesystem, so our shared-NFS design cannot use WAL.", "terms":[["sqlite"],["wal", "write-ahead"],["network", "nfs"]]},
+    {"id":"s3_versioning", "category":"capability", "text":"Amazon S3 versioning preserves overwritten object versions, so we can use it for accidental-overwrite recovery.", "terms":[["s3"],["version"],["overwrit", "overwrot"]]},
+    {"id":"lambda_timeout", "category":"limits_pricing", "text":"AWS Lambda functions have a maximum execution timeout of 15 minutes, so the 20-minute export job needs a different runtime.", "terms":[["lambda"],["15"],["timeout", "execution", "run"]]},
+    {"id":"github_secret", "category":"capability", "text":"GitHub Actions supports encrypted repository secrets, so we can store the deployment token there.", "terms":[["github"],["secret"],["encrypt"]]},
+    {"id":"mit_commercial", "category":"policy_licensing", "text":"The MIT license permits commercial use, so an MIT-licensed parser is eligible for our paid product.", "terms":[["mit"],["commercial"]]},
+    {"id":"stripe_unit", "category":"technical_behavior", "text":"Stripe's payment API expects USD amounts in cents, so our checkout integration must convert dollars before sending the amount.", "terms":[["stripe"],["cent", "smallest", "minor"],["usd", "dollar"]]},
+    {"id":"redis_ttl", "category":"capability", "text":"Redis supports setting a TTL on individual keys, so it can expire each temporary session record automatically.", "terms":[["redis"],["ttl", "time-to-live", "expire", "expiration"],["key"]]}
+  ]
+}

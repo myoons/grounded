@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>NSMicrophoneUsageDescription</key><string>Grounded captures your microphone after you open a detected meeting. Audio is sent through your connected service to Runpod for transcription.</string>
+  <key>NSAudioCaptureUsageDescription</key><string>Grounded captures computer playback after you open a detected meeting. Other application sounds may be included. Audio is sent to Runpod for transcription.</string>
+</dict></plist>

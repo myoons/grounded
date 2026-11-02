@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grounded</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-meeting="idle">
+  <header>
+    <div class="brand"><span class="brand-mark" aria-hidden="true">◧</span><strong>Grounded</strong></div>
+    <div class="meeting-controls">
+      <span class="live-status"><span class="status-dot"></span><span id="session-state">Ready to listen</span></span>
+      <button id="retry-checks" hidden>Retry checks</button>
+      <button id="recover-checks" hidden>Finish pending checks</button>
+      <button id="pause" hidden disabled>Pause</button>
+      <button id="resume" hidden disabled>Resume</button>
+      <button id="stop" hidden disabled>End meeting</button>
+      <button id="back" hidden>Meetings</button>
+    </div>
+  </header>
+  <main>
+    <p id="audio-recovery-error" role="alert" hidden></p>
+    <section id="pending-audio" hidden aria-live="polite">
+      <h2>Pending audio</h2>
+      <p>Audio needs processing. Saved chunks are encrypted on this Mac. Keep the app open if a local write failed. Resume processing without opening your microphone, or explicitly delete saved audio.</p>
+      <p id="corrupt-audio" role="alert" hidden>Encrypted audio could not be read and is preserved. Resolve local recovery before starting capture.</p>
+      <button id="quarantine-audio" hidden>Resolve unreadable audio</button>
+      <div id="pending-audio-list"></div>
+    </section>
+    <section id="lobby">
+      <h1>Detected meetings</h1>
+      <p id="discovery-message">Looking for Google Meet…</p>
+      <div id="meeting-list"></div>
+      <section class="history-section">
+        <h1>Past meetings</h1>
+        <p id="history-empty">Your saved meetings will appear here.</p>
+        <div id="history-list"></div>
+        <button id="history-more" hidden>Load more</button>
+      </section>
+    </section>
+    <section id="room" hidden><h2 id="room-title">Meeting</h2><p id="save-status" role="status" hidden></p><div class="columns">
+      <section class="pane conversation-pane">
+        <div class="section-heading"><div><p class="eyebrow">THE CONVERSATION</p><h1>Meeting script</h1></div><span id="transcript-count" class="count">0</span></div>
+        <div class="pane-body">
+          <div id="transcript-empty" class="empty-state"><h2>Waiting for conversation…</h2></div>
+          <div id="transcript" class="scroll" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="pane checks-pane">
+        <div class="section-heading"><div><p class="eyebrow">CHECK THE FACTS</p><h1>Claims &amp; findings</h1></div><span id="candidate-count" class="count">0</span></div>
+        <div class="pane-body">
+          <div id="cards-empty" class="empty-state"><h2>Listening for claims…</h2><p></p></div>
+          <div id="candidates" class="scroll" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+    </section>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+{
+  "model": "kimi-k3",
+  "endpoint": "moonshot-kimi",
+  "reasoning_effort": "low",
+  "max_output_tokens": 1200,
+  "temperature": "provider default",
+  "synthetic": true,
+  "split": "dev",
+  "repetitions": 1,
+  "concurrency": 3,
+  "prompt_sha256": "ee86c1ba4ecacb0c5fad3ba9d4bb95d43ab5a697e9b37cf8238d45dd8c964d65",
+  "dataset_sha256": "38822990bc006484d575aa486cc30f4f9b315c930624397abf0be0b5dd5e5bbb",
+  "cases_sha256": "17d08d32fe9965fb525bbaa82782b301977907b0d938539b0bf75ecfb1ca6194",
+  "results": [
+    {
+      "case": "dev_opinion",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1248,
+        "round_trip_ms": 3303.99,
+        "queue_delay_ms": 179,
+        "provider_execution_ms": 2051,
+        "completion_tokens": 23,
+        "reasoning_tokens": 6,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 208,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 3306
+    },
+    {
+      "case": "dev_internal_status",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1262,
+        "round_trip_ms": 4867.58,
+        "queue_delay_ms": 179,
+        "provider_execution_ms": 3689,
+        "completion_tokens": 37,
+        "reasoning_tokens": 23,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 214,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4869
+    },
+    {
+      "case": "dev_pricing",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 free tier can store fifty terabytes, making the storage budget zero.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does Amazon S3 free tier allow storing 50 TB so the storage budget is zero?",
+          "reason": "Decision depends on S3 free-tier storage limits and zero-budget assumption.",
+          "conditions": [
+            "Account is on the AWS free tier offering applicable to S3",
+            "Data stored in Amazon S3 Standard unless stated otherwise"
+          ],
+          "missing_information": [
+            "AWS region and storage class planned for the 50 TB"
+          ],
+          "topic_key": "aws_s3_free_tier_50tb",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1422,
+        "round_trip_ms": 7300.5,
+        "queue_delay_ms": 86,
+        "provider_execution_ms": 6522,
+        "completion_tokens": 187,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 242,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7304
+    },
+    {
+      "case": "dev_repeat",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": "00000000-0000-4000-8000-000000000001"
+        }
+      ],
+      "changes": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL supports multiple concurrent writers on a network filesystem.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL support concurrent writers on a network filesystem?",
+          "reason": "Design depends on WAL multi-writer support over network filesystems.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network-filesystem",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1504,
+        "round_trip_ms": 6517.45,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 5221,
+        "completion_tokens": 139,
+        "reasoning_tokens": 11,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 613,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6522
+    },
+    {
+      "case": "dev_capability",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL mode can be used for concurrent writers across a network filesystem.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL mode safely support concurrent writers when the database is on a network filesystem?",
+          "reason": "Deployment decision depends on whether WAL works reliably over the network filesystem in use.",
+          "conditions": [],
+          "missing_information": [
+            "Which network filesystem (e.g., NFS, SMB) is being considered"
+          ],
+          "topic_key": "sqlite_wal_network_fs",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1388,
+        "round_trip_ms": 15113.45,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 14014,
+        "completion_tokens": 162,
+        "reasoning_tokens": 22,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 223,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 15116
+    },
+    {
+      "case": "dev_withdrawn_before_detection",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1304,
+        "round_trip_ms": 8418.57,
+        "queue_delay_ms": 299,
+        "provider_execution_ms": 7457,
+        "completion_tokens": 27,
+        "reasoning_tokens": 13,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 323,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8423
+    },
+    {
+      "case": "dev_vague",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1255,
+        "round_trip_ms": 6540.65,
+        "queue_delay_ms": 1877,
+        "provider_execution_ms": 4133,
+        "completion_tokens": 32,
+        "reasoning_tokens": 18,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 196,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6545
+    },
+    {
+      "case": "dev_withdrawal",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "retract",
+          "category": "technical_behavior",
+          "required_evidence": [
+            2
+          ],
+          "candidate_id": "00000000-0000-4000-8000-000000000001"
+        }
+      ],
+      "changes": [
+        {
+          "action": "retract",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL supports network filesystems.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Does SQLite WAL support concurrent writers on a network filesystem?",
+          "reason": "Speaker explicitly withdrew the claim and stated design no longer depends on SQLite.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network-filesystem",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1554,
+        "round_trip_ms": 11272.81,
+        "queue_delay_ms": 290,
+        "provider_execution_ms": 10117,
+        "completion_tokens": 136,
+        "reasoning_tokens": 10,
+        "context_segments": 2,
+        "context_candidates": 1,
+        "context_chars": 715,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 11277
+    },
+    {
+      "case": "dev_private_metric",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1246,
+        "round_trip_ms": 10046.15,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 9441,
+        "completion_tokens": 23,
+        "reasoning_tokens": 9,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 206,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10050
+    },
+    {
+      "case": "dev_prediction",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1244,
+        "round_trip_ms": 9203.91,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 8436,
+        "completion_tokens": 21,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 201,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9208
+    },
+    {
+      "case": "dev_license",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "statement": "Any GPL-licensed library can be used in a closed-source distributed app without licensing obligations.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does using a GPL-licensed library in a closed-source distributed app impose no licensing obligations?",
+          "reason": "Team assumes GPL use in proprietary distribution is obligation-free, which determines legal compliance for release.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "gpl_closed_source_distribution",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1382,
+        "round_trip_ms": 9701.29,
+        "queue_delay_ms": 134,
+        "provider_execution_ms": 8895,
+        "completion_tokens": 151,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 257,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9705
+    },
+    {
+      "case": "dev_comparison",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "statement": "Redis is always twice as fast as Memcached on identical hardware and workload.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Is Redis always twice as fast as Memcached on identical hardware and workload?",
+          "reason": "Choice between Redis and Memcached depends on this performance claim.",
+          "conditions": [
+            "Identical hardware and workload"
+          ],
+          "missing_information": [
+            "Which Redis and Memcached versions and operation mix"
+          ],
+          "topic_key": "redis_vs_memcached_throughput",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1398,
+        "round_trip_ms": 7733.96,
+        "queue_delay_ms": 85,
+        "provider_execution_ms": 6942,
+        "completion_tokens": 164,
+        "reasoning_tokens": 29,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 249,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7739
+    },
+    {
+      "case": "dev_announced_status",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "statement": "Python 3.8 has reached end of life.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Has Python 3.8 reached end of life according to the official Python release support schedule?",
+          "reason": "The end-of-life status drives the proposed production runtime upgrade decision.",
+          "conditions": [
+            "Refer to official Python release support status"
+          ],
+          "missing_information": [],
+          "topic_key": "python-3.8-eol",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1377,
+        "round_trip_ms": 8877.76,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 7926,
+        "completion_tokens": 145,
+        "reasoning_tokens": 17,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 230,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8882
+    },
+    {
+      "case": "dev_feature_support",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Amazon S3 supports object versioning, allowing recovery of overwritten objects if enabled.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does Amazon S3 support object versioning to recover overwritten objects when enabled?",
+          "reason": "Decides whether S3 can protect against accidental overwrites.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3_versioning_overwrite_recovery",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1357,
+        "round_trip_ms": 9684.06,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 8933,
+        "completion_tokens": 126,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 242,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9689
+    },
+    {
+      "case": "dev_injection",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1276,
+        "round_trip_ms": 4460.34,
+        "queue_delay_ms": 83,
+        "provider_execution_ms": 3648,
+        "completion_tokens": 43,
+        "reasoning_tokens": 29,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 253,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4463
+    },
+    {
+      "case": "dev_late_claim",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "PostgreSQL logical replication copies all schema changes automatically.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL logical replication automatically copy all schema changes?",
+          "reason": "Proposal finalization depends on whether PostgreSQL logical replication handles schema changes automatically.",
+          "conditions": [
+            "PostgreSQL logical replication",
+            "automatic schema change propagation"
+          ],
+          "missing_information": [],
+          "topic_key": "postgres_logical_replication_schema_changes",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1525,
+        "round_trip_ms": 8135.12,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 7576,
+        "completion_tokens": 237,
+        "reasoning_tokens": 114,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 652,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8139
+    },
+    {
+      "case": "dev_capability_repeat_run",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL mode can be used for concurrent writers across a network filesystem.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL mode support concurrent writers safely across a network filesystem?",
+          "reason": "Deployment decision depends on whether WAL locking works reliably over network filesystems.",
+          "conditions": [
+            "Concurrent writers from multiple hosts",
+            "Network filesystem in use"
+          ],
+          "missing_information": [
+            "Which network filesystem (NFS, SMB, etc.) is planned"
+          ],
+          "topic_key": "sqlite-wal-network-fs-concurrency",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1394,
+        "round_trip_ms": 7347.86,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 6879,
+        "completion_tokens": 168,
+        "reasoning_tokens": 22,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 223,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7349
+    },
+    {
+      "case": "dev_earlier_context",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "required_evidence": [
+            11
+          ],
+          "candidate_id": null
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "The Cloudflare Workers free plan has unlimited CPU time, making it suitable for the image-conversion worker.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001",
+            "00000000-0000-4000-8001-000000000011"
+          ],
+          "question": "Does the Cloudflare Workers free plan provide unlimited CPU time?",
+          "reason": "Determines whether the free plan can support the image-conversion worker.",
+          "conditions": [
+            "Focus on the free plan, not paid Workers tiers.",
+            "Assess suitability for the image-conversion worker workload."
+          ],
+          "missing_information": [
+            "Expected image-conversion CPU time per request",
+            "Whether the workload stays within Cloudflare free plan request or invocation limits"
+          ],
+          "topic_key": "cloudflare-workers-free-plan-cpu-time",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1976,
+        "round_trip_ms": 10226.41,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 9390,
+        "completion_tokens": 217,
+        "reasoning_tokens": 25,
+        "context_segments": 11,
+        "context_candidates": 0,
+        "context_chars": 1419,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10230
+    }
+  ],
+  "summary": {
+    "passed": 18,
+    "total": 18,
+    "median_ms": 8281.0,
+    "max_ms": 15116
+  }
+}

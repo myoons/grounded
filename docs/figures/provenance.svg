@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680" role="img" aria-labelledby="title description">
+<title id="title">A finding keeps its chain of evidence.</title><desc id="description">A concrete example: utterance U17 links to claim C4, retrieved source S1 and exact quote S1-Q2. These are illustrative labels, not actual API UUIDs. A quote establishes provenance, not infallible interpretation.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 02</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">A finding keeps its chain of evidence.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">An illustrative SQLite claim, with shortened IDs for readability.</text>
+<path d="M40 632 L1040 632" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="658" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<rect x="40" y="155" width="470" height="170" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 173 V307" stroke="#2563a6" stroke-width="4"/>
+<text x="72" y="189" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">01  Utterance · U17</text>
+<text x="72" y="221" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">SQLite WAL works across servers</text>
+<text x="72" y="246" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">on a network filesystem.</text>
+<text x="72" y="271" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Input channel + timestamp + segment ID</text>
+<rect x="570" y="155" width="470" height="170" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M586 173 V307" stroke="#6d55a4" stroke-width="4"/>
+<text x="602" y="189" font-size="20" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">02  Claim · C4 / revision 2</text>
+<text x="602" y="221" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Question: does WAL support this setup?</text>
+<text x="602" y="246" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Category: technical behavior</text>
+<text x="602" y="271" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Evidence reference: U17</text>
+<rect x="570" y="380" width="470" height="185" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M586 398 V547" stroke="#a96615" stroke-width="4"/>
+<text x="602" y="414" font-size="20" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">03  Source · S1 / quote S1-Q2</text>
+<text x="602" y="446" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">sqlite.org/wal.html</text>
+<text x="602" y="471" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">WAL does not work over a network</text>
+<text x="602" y="496" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">filesystem.</text>
+<text x="602" y="521" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Exact text + server-owned source mapping</text>
+<rect x="40" y="380" width="470" height="185" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 398 V547" stroke="#2563a6" stroke-width="4"/>
+<text x="72" y="414" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">04  Finding · contradicted</text>
+<text x="72" y="446" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">No: WAL does not support this setup.</text>
+<text x="72" y="471" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Inspect the source; jump back to U17.</text>
+<text x="72" y="496" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Publication requires matching revision.</text>
+<text x="72" y="521" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">The model never supplies a trusted URL.</text>
+<path d="M510 235 L570 235" fill="none" stroke="#6d55a4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+<path d="M805 325 L805 380" fill="none" stroke="#a96615" stroke-width="2" marker-end="url(#arrow-amber)"/>
+<path d="M570 465 L510 465" fill="none" stroke="#2563a6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="40" y="608" font-size="19" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Read the answer → inspect the quotation → locate the original speech.</text>
+</g></svg>

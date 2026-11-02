@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>GroundedAudioCheck</string>
+<key>CFBundleIdentifier</key><string>dev.grounded.coreaudio-check</string>
+<key>CFBundleName</key><string>Grounded Audio Check</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>LSMinimumSystemVersion</key><string>14.2</string>
+<key>NSAudioCaptureUsageDescription</key><string>Verify system playback from your meeting for 15 seconds. No microphone or screen is captured. No audio is saved or uploaded.</string>
+</dict></plist>

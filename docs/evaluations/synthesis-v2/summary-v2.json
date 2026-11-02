@@ -1,0 +1,462 @@
+{
+  "scope": "Post-hoc v2 lexical regression on preserved outputs, not new inference or held-out accuracy. Five cases have additional summary constraints; remaining cases retain v1 checks.",
+  "source_sha256": "29de26dc9c6be53f440736d8283e0ba7bfb45ba0b039ee8cb669d86c1dec122e",
+  "gold_sha256": "d9e282164d320e3e7ef6ef950bfe04dbeae1c84bc0501e6e2587f7b4f1af6f45",
+  "original_passed": 27,
+  "total": 30,
+  "passed": 27,
+  "reports": [
+    {
+      "id": "capability_supported",
+      "repeat": 1,
+      "checks": {
+        "verdict": false,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "capability_version",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "plan_overgeneralization",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true,
+        "free_quantity_and_unit": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "plan_unmentioned",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "license_contradicted",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "license_conditional",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "matched_performance",
+      "repeat": 1,
+      "checks": {
+        "verdict": false,
+        "scope_terms": false,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "marketing_performance",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "technical_condition",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "technical_conflict",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "status_supported",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "status_undated",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "discussion_only",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "source_injection",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "empty_sources",
+      "repeat": 1,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "capability_supported",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "capability_version",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "plan_overgeneralization",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true,
+        "free_quantity_and_unit": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "plan_unmentioned",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "license_contradicted",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "license_conditional",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "matched_performance",
+      "repeat": 2,
+      "checks": {
+        "verdict": false,
+        "scope_terms": false,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": false,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "marketing_performance",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "technical_condition",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "technical_conflict",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "status_supported",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "status_undated",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "discussion_only",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "source_injection",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    },
+    {
+      "id": "empty_sources",
+      "repeat": 2,
+      "checks": {
+        "verdict": true,
+        "scope_terms": true,
+        "forbidden_terms_absent": true,
+        "citation_integrity": true,
+        "factual_verdict_has_citation": true,
+        "explicit_summary_scope": true
+      },
+      "passed": true,
+      "semantic_review": "required",
+      "rubric": "v2 post-hoc scope regression; not semantic accuracy"
+    }
+  ]
+}

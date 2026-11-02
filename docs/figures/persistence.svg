@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="830" viewBox="0 0 1080 830" role="img" aria-labelledby="title description">
+<title id="title">Relationships survive; partial commits do not.</title><desc id="description">A grouped relational map, not every foreign key. Meeting-scoped composite keys link immutable transcript rows to claim revisions, research and citations. Audio outcome and receipt commit atomically before local deletion.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 06</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Relationships survive; partial commits do not.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Fourteen tables: thirteen domain tables plus durable audio receipts.</text>
+<path d="M40 782 L1040 782" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="808" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<rect x="40" y="170" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 188 V264" stroke="#2563a6" stroke-width="4"/>
+<text x="72" y="204" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">meetings</text>
+<text x="72" y="236" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Lifecycle / epoch / processing cursor</text>
+<rect x="40" y="310" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 328 V404" stroke="#2563a6" stroke-width="4"/>
+<text x="72" y="344" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">transcript_segments</text>
+<text x="72" y="376" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Original text + stable sequence</text>
+<rect x="400" y="170" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M416 188 V264" stroke="#6d55a4" stroke-width="4"/>
+<text x="432" y="204" font-size="20" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">claims</text>
+<text x="432" y="236" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Stable identity / current revision</text>
+<rect x="400" y="310" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M416 328 V404" stroke="#6d55a4" stroke-width="4"/>
+<text x="432" y="344" font-size="20" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">claim_revisions</text>
+<text x="432" y="376" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">statement / question / category</text>
+<rect x="760" y="170" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M776 188 V264" stroke="#2563a6" stroke-width="4"/>
+<text x="792" y="204" font-size="20" fill="#2563a6" font-weight="700" letter-spacing="0" text-anchor="start">meeting_presentation</text>
+<text x="792" y="236" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">expanded_claims</text>
+<rect x="760" y="310" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M776 328 V404" stroke="#a96615" stroke-width="4"/>
+<text x="792" y="344" font-size="20" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">research_results</text>
+<text x="792" y="376" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">research_sources</text>
+<text x="792" y="401" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">research_citations / caveats</text>
+<rect x="400" y="490" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M416 508 V584" stroke="#6d55a4" stroke-width="4"/>
+<text x="432" y="524" font-size="20" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">claim_evidence</text>
+<text x="432" y="556" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Revision to original utterance</text>
+<text x="432" y="581" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">claim_attributes / relations</text>
+<rect x="40" y="490" width="280" height="112" rx="12" fill="#ffffff" stroke="#ccd6df" stroke-width="1"/>
+<path d="M56 508 V584" stroke="#087e8b" stroke-width="4"/>
+<text x="72" y="524" font-size="20" fill="#087e8b" font-weight="700" letter-spacing="0" text-anchor="start">audio_receipts</text>
+<text x="72" y="556" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Chunk identity + terminal outcome</text>
+<text x="72" y="581" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Same commit as transcript</text>
+<path d="M320 212 L400 212" fill="none" stroke="#6d55a4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+<path d="M680 212 L760 212" fill="none" stroke="#2563a6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<path d="M180 282 L180 310" fill="none" stroke="#2563a6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<path d="M540 282 L540 310" fill="none" stroke="#6d55a4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+<path d="M680 366 L760 366" fill="none" stroke="#a96615" stroke-width="2" marker-end="url(#arrow-amber)"/>
+<path d="M540 422 L540 490" fill="none" stroke="#6d55a4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+<path d="M400 545 L355 545 L355 366 L320 366" fill="none" stroke="#6d55a4" stroke-width="2" marker-end="url(#arrow-purple)"/>
+<path d="M180 422 L180 490" fill="none" stroke="#087e8b" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="760" y="500" font-size="20" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">Composite ownership keys</text>
+<text x="760" y="534" font-size="16" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">meeting + claim + revision</text>
+<text x="760" y="560" font-size="16" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">prevent cross-version citations.</text>
+<rect x="40" y="650" width="1000" height="100" rx="12" fill="#edf4f9" stroke="#edf4f9" stroke-width="1"/>
+<text x="62" y="682" font-size="17" fill="#087e8b" font-weight="700" letter-spacing="0" text-anchor="start">COMMIT</text>
+<text x="220" y="682" font-size="19" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Transcript + receipt become durable together.</text>
+<text x="62" y="721" font-size="17" fill="#b34d3d" font-weight="700" letter-spacing="0" text-anchor="start">ROLLBACK</text>
+<text x="220" y="721" font-size="17" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Prior rows remain; no acknowledgement authorizes audio deletion.</text>
+</g></svg>

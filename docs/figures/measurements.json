@@ -1,0 +1,12 @@
+{
+  "provenance": "Synthetic claim-answer evaluation, repeat run, 2026-11-02 KST. Real Firecrawl and Runpod Kimi; concurrency 3; one observation per category. Private source report SHA256 retained below.",
+  "scope": "Research only: excludes capture, ASR, claim extraction and UI. Not percentiles or a production benchmark.",
+  "rows": [
+    {"label":"Capability", "search_ms":4379,"synthesis_ms":10461,"validation_ms":1,"total_ms":14842,"report_sha256":"89d938a114de97f3d52ee08703c647e08868a34021c21d654809d39baec3fb7e"},
+    {"label":"Current status", "search_ms":1132,"synthesis_ms":9605,"validation_ms":0,"total_ms":10738,"report_sha256":"ead8ed13026acd498b8d2e9570d369b5b248a9b7ba9e9121915e61e669e63a9c"},
+    {"label":"Limits / pricing", "search_ms":1835,"synthesis_ms":22172,"validation_ms":1,"total_ms":24008,"report_sha256":"ce686a015cd91fc2ff79afb0ec8ec6f9188f32fc78ad872dd13860056b6ab7fb"},
+    {"label":"Performance", "search_ms":1578,"synthesis_ms":10483,"validation_ms":1,"total_ms":12063,"report_sha256":"8b1c379d403f0ac58415649853ccc14ead8b3e6e935e872aadca846c4feb7f3a"},
+    {"label":"Policy / license", "search_ms":3803,"synthesis_ms":16256,"validation_ms":0,"total_ms":20059,"report_sha256":"897417261ef9112411affa1687d878d5855a21e4f021f8390db93e321921c594"},
+    {"label":"Technical behavior", "search_ms":1419,"synthesis_ms":21122,"validation_ms":2,"total_ms":22542,"report_sha256":"8da78338147c0275014ef774c972e454eb94287895226752a3617995abd287fe"}
+  ]
+}

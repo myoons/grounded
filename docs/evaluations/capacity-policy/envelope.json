@@ -1,0 +1,22 @@
+{
+  "scope": "Synthetic two-channel transcript only; excludes candidate payload, GPU, capture and renderer performance. 768 commits, one observation per size. Not an SLA.",
+  "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+  "policy": {
+    "max_segments": 768,
+    "max_duration_seconds": 3600,
+    "max_candidates": 128,
+    "detection_requests": 180,
+    "research_requests": 60
+  },
+  "segments_restored": 768,
+  "snapshot_bytes_normal": 277445,
+  "snapshot_bytes_maximum_ascii_text": 1641413,
+  "snapshot_bytes_full_stress_graph": 4430567,
+  "full_stress_graph_parse_ms": 4.534,
+  "full_graph_note": "128 synthetic cards with maximum statement/conditions/evidence and 3 citations; URLs 2020 characters/titles500 are chosen stress values, not a proof of all byte maxima. Requires response cap above 2MB.",
+  "last_commit_ms": 8.717,
+  "maximum_commit_ms": 9.135,
+  "total_commit_ms": 3446.428,
+  "database_bytes": 487424,
+  "process_peak_rss_native_units": 72482816
+}

@@ -1,0 +1,1523 @@
+{
+  "model": "kimi-k3",
+  "endpoint": "moonshot-kimi",
+  "reasoning_effort": "low",
+  "max_output_tokens": 1200,
+  "temperature": "provider default",
+  "synthetic": true,
+  "split": "heldout",
+  "repetitions": 2,
+  "concurrency": 3,
+  "prompt_sha256": "a65d242d1021553b0c48d9a7b6c756249cdabb408cf306693e89ca3d040ca463",
+  "dataset_sha256": "38822990bc006484d575aa486cc30f4f9b315c930624397abf0be0b5dd5e5bbb",
+  "cases_sha256": "78f916ffd47ca499e65021ec6b2f1f3971af7f9d52570d433974e2813645c188",
+  "results": [
+    {
+      "case": "heldout_limits",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1408,
+        "round_trip_ms": 4498.31,
+        "queue_delay_ms": 162,
+        "provider_execution_ms": 3774,
+        "completion_tokens": 31,
+        "reasoning_tokens": 16,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 234,
+        "omitted_segments": 0
+      },
+      "passed": false,
+      "references_valid": true,
+      "elapsed_ms": 4501
+    },
+    {
+      "case": "heldout_license",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "statement": "A product can be distributed with an MIT-licensed dependency without publishing proprietary source code.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does distributing a product with an MIT-licensed dependency require publishing proprietary source code?",
+          "reason": "MIT license obligations determine whether proprietary source must be disclosed.",
+          "conditions": [
+            "Product distribution includes an MIT-licensed dependency",
+            "Proprietary source remains unpublished"
+          ],
+          "missing_information": [],
+          "topic_key": "mit_license_source_disclosure",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1556,
+        "round_trip_ms": 9488.54,
+        "queue_delay_ms": 170,
+        "provider_execution_ms": 8471,
+        "completion_tokens": 180,
+        "reasoning_tokens": 43,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 254,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9491
+    },
+    {
+      "case": "heldout_capability",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL support row-level security?",
+          "reason": "Database choice depends on whether PostgreSQL actually offers row-level security.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "postgresql_row_level_security",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1491,
+        "round_trip_ms": 11859.63,
+        "queue_delay_ms": 169,
+        "provider_execution_ms": 10793,
+        "completion_tokens": 120,
+        "reasoning_tokens": 15,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 217,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 11862
+    },
+    {
+      "case": "heldout_performance",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "statement": "For the same dataset on the same machine, DuckDB executes this analytical query ten times faster than SQLite.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does DuckDB execute this analytical query ten times faster than SQLite on the same dataset and machine?",
+          "reason": "Database choice depends on comparative analytical query performance.",
+          "conditions": [
+            "Same dataset and same machine for both databases",
+            "Analytical query workload"
+          ],
+          "missing_information": [
+            "Specific analytical query or workload",
+            "DuckDB and SQLite versions tested"
+          ],
+          "topic_key": "duckdb_sqlite_analytical_performance",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1805,
+        "round_trip_ms": 16503.9,
+        "queue_delay_ms": 89,
+        "provider_execution_ms": 15781,
+        "completion_tokens": 420,
+        "reasoning_tokens": 265,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 277,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 16508
+    },
+    {
+      "case": "heldout_behavior",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "PostgreSQL transactions roll back every change when the transaction is aborted.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL roll back every change made by a transaction when that transaction is aborted?",
+          "reason": "Checkout correctness depends on aborted transactions leaving no partial changes.",
+          "conditions": [
+            "Aborted transaction requires rollback of all changes."
+          ],
+          "missing_information": [
+            "Confirm whether abort includes explicit rollback and error-induced abort."
+          ],
+          "topic_key": "postgresql_transaction_abort_rollback",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1836,
+        "round_trip_ms": 14386.03,
+        "queue_delay_ms": 89,
+        "provider_execution_ms": 13558,
+        "completion_tokens": 460,
+        "reasoning_tokens": 321,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 254,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 14389
+    },
+    {
+      "case": "heldout_status",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "statement": "Node.js 18 has reached end of life, requiring migration of the service.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Has Node.js version 18 officially reached its end of life?",
+          "reason": "Migration decision depends on whether Node.js 18 is actually end of life.",
+          "conditions": [
+            "Refers to Node.js major version 18"
+          ],
+          "missing_information": [],
+          "topic_key": "nodejs-18-eol",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1524,
+        "round_trip_ms": 12328.94,
+        "queue_delay_ms": 193,
+        "provider_execution_ms": 11392,
+        "completion_tokens": 148,
+        "reasoning_tokens": 15,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 217,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 12332
+    },
+    {
+      "case": "heldout_opinion",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1421,
+        "round_trip_ms": 5145.93,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 4466,
+        "completion_tokens": 50,
+        "reasoning_tokens": 36,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 203,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 5149
+    },
+    {
+      "case": "heldout_prediction",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1391,
+        "round_trip_ms": 3270.72,
+        "queue_delay_ms": 147,
+        "provider_execution_ms": 2480,
+        "completion_tokens": 21,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 203,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 3272
+    },
+    {
+      "case": "heldout_internal",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1396,
+        "round_trip_ms": 3952.86,
+        "queue_delay_ms": 81,
+        "provider_execution_ms": 3413,
+        "completion_tokens": 23,
+        "reasoning_tokens": 9,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 229,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 3954
+    },
+    {
+      "case": "heldout_mixed",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            5
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Python supports asynchronous generators, enabling asynchronous streaming of results.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000005"
+          ],
+          "question": "Does Python support asynchronous generators in a way that allows streaming results asynchronously?",
+          "reason": "Implementation choice depends on whether Python supports asynchronous generators for streaming results.",
+          "conditions": [
+            "Claim concerns Python language support for asynchronous generators."
+          ],
+          "missing_information": [],
+          "topic_key": "python_async_generators_streaming",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1713,
+        "round_trip_ms": 6278.85,
+        "queue_delay_ms": 119,
+        "provider_execution_ms": 5232,
+        "completion_tokens": 139,
+        "reasoning_tokens": 15,
+        "context_segments": 5,
+        "context_candidates": 0,
+        "context_chars": 629,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6284
+    },
+    {
+      "case": "heldout_ambiguous",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1408,
+        "round_trip_ms": 10041.11,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 9338,
+        "completion_tokens": 36,
+        "reasoning_tokens": 19,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 206,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10042
+    },
+    {
+      "case": "heldout_all_excluded",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1551,
+        "round_trip_ms": 11919.92,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 11091,
+        "completion_tokens": 30,
+        "reasoning_tokens": 13,
+        "context_segments": 4,
+        "context_candidates": 0,
+        "context_chars": 500,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 11925
+    },
+    {
+      "case": "heldout_injection",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1415,
+        "round_trip_ms": 6299.9,
+        "queue_delay_ms": 81,
+        "provider_execution_ms": 5568,
+        "completion_tokens": 32,
+        "reasoning_tokens": 18,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 272,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6301
+    },
+    {
+      "case": "heldout_two_claims",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            1
+          ]
+        },
+        {
+          "action": "create",
+          "category": "current_status",
+          "required_evidence": [
+            2
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security for authentication.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL support row-level security for authentication?",
+          "reason": "RLS support determines whether PostgreSQL can enforce per-row access control.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "postgresql_row_level_security",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "current_status",
+          "statement": "Node.js 18 has reached end of life.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Has Node.js 18 reached end of life?",
+          "reason": "Node 18 EOL status determines upgrade urgency.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "nodejs_18_eol",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1651,
+        "round_trip_ms": 8631.71,
+        "queue_delay_ms": 83,
+        "provider_execution_ms": 7691,
+        "completion_tokens": 222,
+        "reasoning_tokens": 22,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 343,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8634
+    },
+    {
+      "case": "heldout_withdrawn",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1459,
+        "round_trip_ms": 4706.98,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 3585,
+        "completion_tokens": 28,
+        "reasoning_tokens": 14,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 368,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4711
+    },
+    {
+      "case": "heldout_context",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            2
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security, meeting the access control requirement.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Does PostgreSQL support row-level security for access control?",
+          "reason": "Access control requirement decision depends on row-level security support.",
+          "conditions": [],
+          "missing_information": [
+            "PostgreSQL version and access control requirements under evaluation"
+          ],
+          "topic_key": "postgresql-row-level-security",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1560,
+        "round_trip_ms": 4231.46,
+        "queue_delay_ms": 91,
+        "provider_execution_ms": 3658,
+        "completion_tokens": 135,
+        "reasoning_tokens": 12,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 333,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4236
+    },
+    {
+      "case": "heldout_repeat",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "link",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "link",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows individual objects of up to five terabytes.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum individual object size allowed by Amazon S3?",
+          "reason": "Repetition of the existing S3 five-terabyte object limit premise.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-object-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1687,
+        "round_trip_ms": 6562.87,
+        "queue_delay_ms": 244,
+        "provider_execution_ms": 5733,
+        "completion_tokens": 171,
+        "reasoning_tokens": 37,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 567,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6567
+    },
+    {
+      "case": "heldout_update",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "update",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows a single PUT request to upload up to five gigabytes of data.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum size for a single PUT request to Amazon S3?",
+          "reason": "Clarifies upload size limit for S3 single PUT operations.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-put-size-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1842,
+        "round_trip_ms": 12061.67,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 11271,
+        "completion_tokens": 318,
+        "reasoning_tokens": 194,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 608,
+        "omitted_segments": 0
+      },
+      "passed": false,
+      "references_valid": true,
+      "elapsed_ms": 12066
+    },
+    {
+      "case": "heldout_retract",
+      "repetition": 1,
+      "expected": [
+        {
+          "action": "retract",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "retract",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows individual objects of up to five terabytes.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum individual object size allowed by Amazon S3?",
+          "reason": "S3 size-limit premise explicitly withdrawn; uploads no longer use S3, so limit is decision-irrelevant.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-object-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1668,
+        "round_trip_ms": 9908.03,
+        "queue_delay_ms": 91,
+        "provider_execution_ms": 9148,
+        "completion_tokens": 154,
+        "reasoning_tokens": 8,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 559,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9913
+    },
+    {
+      "case": "heldout_limits",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 permits individual objects of up to five terabytes.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does Amazon S3 permit individual objects of up to five terabytes?",
+          "reason": "Upload design depends on the S3 per-object size limit.",
+          "conditions": [
+            "Individual object size limit in Amazon S3"
+          ],
+          "missing_information": [],
+          "topic_key": "s3_max_object_size",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1518,
+        "round_trip_ms": 7356.26,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 6444,
+        "completion_tokens": 141,
+        "reasoning_tokens": 16,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 234,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7359
+    },
+    {
+      "case": "heldout_capability",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL support row-level security?",
+          "reason": "PostgreSQL row-level security support is the stated basis for choosing it.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "postgresql-row-level-security-support",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1499,
+        "round_trip_ms": 9957.47,
+        "queue_delay_ms": 158,
+        "provider_execution_ms": 8605,
+        "completion_tokens": 128,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 217,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9960
+    },
+    {
+      "case": "heldout_already_linked",
+      "repetition": 1,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1572,
+        "round_trip_ms": 22036.53,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 21537,
+        "completion_tokens": 37,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 618,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 22040
+    },
+    {
+      "case": "heldout_performance",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "performance_comparison",
+          "statement": "For the same dataset on the same machine, DuckDB executes this analytical query ten times faster than SQLite.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does DuckDB execute this analytical query ten times faster than SQLite on the same dataset and machine?",
+          "reason": "The recommendation to choose DuckDB depends on this measured speed comparison.",
+          "conditions": [
+            "same dataset",
+            "same machine"
+          ],
+          "missing_information": [],
+          "topic_key": "duckdb_vs_sqlite_analytical_query_speed",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1555,
+        "round_trip_ms": 8163.6,
+        "queue_delay_ms": 82,
+        "provider_execution_ms": 7516,
+        "completion_tokens": 170,
+        "reasoning_tokens": 31,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 277,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8168
+    },
+    {
+      "case": "heldout_license",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "policy_licensing",
+          "statement": "Distributing the product with an MIT-licensed dependency does not require publishing the product's proprietary source code.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does the MIT license permit distributing the dependency with a proprietary product without publishing the product's source code?",
+          "reason": "Determines whether planned distribution model complies with the dependency's license terms.",
+          "conditions": [
+            "The dependency is distributed alongside the proprietary product",
+            "The proprietary product is not a derivative work of the dependency"
+          ],
+          "missing_information": [
+            "The specific MIT-licensed dependency and its exact license text"
+          ],
+          "topic_key": "mit-dependency-proprietary-distribution",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1571,
+        "round_trip_ms": 10497.03,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 9600,
+        "completion_tokens": 195,
+        "reasoning_tokens": 26,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 254,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10502
+    },
+    {
+      "case": "heldout_behavior",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "PostgreSQL transactions roll back every change when the transaction is aborted.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL roll back every change when a transaction is aborted?",
+          "reason": "Checkout correctness depends on complete rollback of aborted transactions.",
+          "conditions": [
+            "Applies to checkout transactions"
+          ],
+          "missing_information": [],
+          "topic_key": "postgres_transaction_abort_rollback",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1527,
+        "round_trip_ms": 7817.63,
+        "queue_delay_ms": 249,
+        "provider_execution_ms": 6399,
+        "completion_tokens": 151,
+        "reasoning_tokens": 33,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 254,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7823
+    },
+    {
+      "case": "heldout_opinion",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1388,
+        "round_trip_ms": 4704.93,
+        "queue_delay_ms": 161,
+        "provider_execution_ms": 3469,
+        "completion_tokens": 17,
+        "reasoning_tokens": 3,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 203,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4708
+    },
+    {
+      "case": "heldout_status",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "current_status",
+          "statement": "Node.js 18 has reached end of life.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Has Node.js 18 officially reached end of life, and on what date?",
+          "reason": "Migration decision depends on Node.js 18's official end-of-life status.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "nodejs-18-eol-status",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1511,
+        "round_trip_ms": 9180.43,
+        "queue_delay_ms": 85,
+        "provider_execution_ms": 8271,
+        "completion_tokens": 135,
+        "reasoning_tokens": 14,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 217,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9185
+    },
+    {
+      "case": "heldout_internal",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1396,
+        "round_trip_ms": 4618.73,
+        "queue_delay_ms": 83,
+        "provider_execution_ms": 3607,
+        "completion_tokens": 23,
+        "reasoning_tokens": 9,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 229,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4622
+    },
+    {
+      "case": "heldout_prediction",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1391,
+        "round_trip_ms": 4756.89,
+        "queue_delay_ms": 171,
+        "provider_execution_ms": 3238,
+        "completion_tokens": 21,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 203,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 4759
+    },
+    {
+      "case": "heldout_all_excluded",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1554,
+        "round_trip_ms": 6899.8,
+        "queue_delay_ms": 136,
+        "provider_execution_ms": 6113,
+        "completion_tokens": 33,
+        "reasoning_tokens": 16,
+        "context_segments": 4,
+        "context_candidates": 0,
+        "context_chars": 500,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 6903
+    },
+    {
+      "case": "heldout_mixed",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            5
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "Python supports asynchronous generators, which can be used to stream results.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000005"
+          ],
+          "question": "Does Python support asynchronous generators for streaming results?",
+          "reason": "Determines whether Python can stream results via asynchronous generators for this use case.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "python-async-generators",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1717,
+        "round_trip_ms": 7289.23,
+        "queue_delay_ms": 275,
+        "provider_execution_ms": 6345,
+        "completion_tokens": 143,
+        "reasoning_tokens": 31,
+        "context_segments": 5,
+        "context_candidates": 0,
+        "context_chars": 629,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7294
+    },
+    {
+      "case": "heldout_ambiguous",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1408,
+        "round_trip_ms": 10151.24,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 8677,
+        "completion_tokens": 36,
+        "reasoning_tokens": 19,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 206,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10155
+    },
+    {
+      "case": "heldout_injection",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1417,
+        "round_trip_ms": 3662.37,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 3052,
+        "completion_tokens": 34,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 0,
+        "context_chars": 272,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 3666
+    },
+    {
+      "case": "heldout_withdrawn",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1467,
+        "round_trip_ms": 3816.73,
+        "queue_delay_ms": 90,
+        "provider_execution_ms": 3422,
+        "completion_tokens": 36,
+        "reasoning_tokens": 22,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 368,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 3818
+    },
+    {
+      "case": "heldout_two_claims",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            1
+          ]
+        },
+        {
+          "action": "create",
+          "category": "current_status",
+          "required_evidence": [
+            2
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security for authentication.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does PostgreSQL support row-level security for authentication?",
+          "reason": "Feature support determines database authentication design choice.",
+          "conditions": [
+            "Applies to PostgreSQL authentication/authorization features."
+          ],
+          "missing_information": [],
+          "topic_key": "postgresql_row_level_security_authentication",
+          "related_ids": []
+        },
+        {
+          "action": "create",
+          "category": "current_status",
+          "statement": "Node.js 18 has reached end of life.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Has Node.js 18 reached end of life, requiring an upgrade schedule?",
+          "reason": "Runtime EOL status determines whether upgrade scheduling is required.",
+          "conditions": [
+            "Refers to Node.js version 18 release line."
+          ],
+          "missing_information": [],
+          "topic_key": "nodejs_18_end_of_life",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1688,
+        "round_trip_ms": 14235.5,
+        "queue_delay_ms": 82,
+        "provider_execution_ms": 13430,
+        "completion_tokens": 259,
+        "reasoning_tokens": 33,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 343,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 14240
+    },
+    {
+      "case": "heldout_context",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "create",
+          "category": "capability",
+          "required_evidence": [
+            2
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "PostgreSQL supports row-level security, meeting the access control requirement.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001",
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Does PostgreSQL support row-level security for access control?",
+          "reason": "Access-control tool selection depends on whether PostgreSQL offers row-level security.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "postgresql-row-level-security",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1572,
+        "round_trip_ms": 10487.78,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 9300,
+        "completion_tokens": 147,
+        "reasoning_tokens": 13,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 333,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 10492
+    },
+    {
+      "case": "heldout_repeat",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "link",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "link",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows individual objects of up to five terabytes.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum individual object size allowed by Amazon S3?",
+          "reason": "System message restates the same S3 five-terabyte per-object limit premise.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-object-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1725,
+        "round_trip_ms": 8526.69,
+        "queue_delay_ms": 82,
+        "provider_execution_ms": 8026,
+        "completion_tokens": 209,
+        "reasoning_tokens": 75,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 567,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 8531
+    },
+    {
+      "case": "heldout_retract",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "retract",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "retract",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows individual objects of up to five terabytes.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum individual object size allowed by Amazon S3?",
+          "reason": "Speaker explicitly withdrew the S3 size-limit premise; S3 is no longer used for uploads.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-object-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1672,
+        "round_trip_ms": 7837.97,
+        "queue_delay_ms": 116,
+        "provider_execution_ms": 6840,
+        "completion_tokens": 158,
+        "reasoning_tokens": 17,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 559,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 7842
+    },
+    {
+      "case": "heldout_already_linked",
+      "repetition": 2,
+      "expected": [],
+      "changes": [],
+      "usage": {
+        "total_tokens": 1566,
+        "round_trip_ms": 9956.59,
+        "queue_delay_ms": 84,
+        "provider_execution_ms": 9394,
+        "completion_tokens": 31,
+        "reasoning_tokens": 14,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 618,
+        "omitted_segments": 0
+      },
+      "passed": true,
+      "references_valid": true,
+      "elapsed_ms": 9961
+    },
+    {
+      "case": "heldout_update",
+      "repetition": 2,
+      "expected": [
+        {
+          "action": "update",
+          "category": "limits_pricing",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "required_evidence": [
+            1
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "action": "create",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 has a five-gigabyte limit for a single PUT request.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum size for a single PUT request to Amazon S3?",
+          "reason": "Speaker corrects that five-gigabyte limit applies to single PUT requests, not maximum object size.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-single-put-limit",
+          "related_ids": []
+        },
+        {
+          "action": "update",
+          "category": "limits_pricing",
+          "statement": "Amazon S3 allows individual objects larger than five gigabytes via multipart upload.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "What is the maximum individual object size allowed by Amazon S3?",
+          "reason": "Speaker clarifies five-gigabyte figure refers to single PUT limit, not the maximum object size.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "s3-object-limit",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 2059,
+        "round_trip_ms": 16170.72,
+        "queue_delay_ms": 274,
+        "provider_execution_ms": 15515,
+        "completion_tokens": 535,
+        "reasoning_tokens": 280,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 608,
+        "omitted_segments": 0
+      },
+      "passed": false,
+      "references_valid": true,
+      "elapsed_ms": 16174
+    }
+  ],
+  "summary": {
+    "passed": 37,
+    "total": 40,
+    "median_ms": 8349.5,
+    "max_ms": 22040
+  }
+}

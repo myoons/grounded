@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="730" viewBox="0 0 1080 730" role="img" aria-labelledby="title description">
+<title id="title">In this run, synthesis dominated research time.</title><desc id="description">Research only: excludes capture, ASR, claim extraction and UI. Not percentiles or a production benchmark. Shared zero baseline, seconds. Search and synthesis are stacked; total labels include negligible validation/rounding overhead. Source hashes and values are in measurements.json.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs>
+<marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#586777"/></marker>
+<marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+<marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#087e8b"/></marker>
+<marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#6d55a4"/></marker>
+<marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#a96615"/></marker>
+<marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#b34d3d"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="35" font-size="14" fill="#586777" font-weight="700" letter-spacing="2" text-anchor="start">GROUNDED / FIGURE 09</text>
+<text x="40" y="80" font-size="30" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">In this run, synthesis dominated research time.</text>
+<text x="40" y="112" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Real Firecrawl + Kimi requests; six synthetic claims; one observation per category.</text>
+<path d="M40 682 L1040 682" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="40" y="708" font-size="13" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Grounded · See Visual Atlas for assumptions, measurement scope and source mapping</text>
+<rect x="250" y="145" width="16" height="16" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<text x="276" y="159" font-size="17" fill="#a96615" font-weight="700" letter-spacing="0" text-anchor="start">Search</text>
+<rect x="400" y="145" width="16" height="16" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="426" y="159" font-size="17" fill="#6d55a4" font-weight="700" letter-spacing="0" text-anchor="start">Synthesis</text>
+<path d="M250 185 L250 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="250" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">0</text>
+<path d="M365 185 L365 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="365" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">5</text>
+<path d="M480 185 L480 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="480" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">10</text>
+<path d="M595 185 L595 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="595" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">15</text>
+<path d="M710 185 L710 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="710" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">20</text>
+<path d="M825 185 L825 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="825" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">25</text>
+<path d="M940 185 L940 578" fill="none" stroke="#ccd6df" stroke-width="1"/>
+<text x="940" y="606" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="middle">30</text>
+<text x="40" y="227" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Capability</text>
+<rect x="250" y="202" width="100.71699999999998" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="350.717" y="202" width="240.603" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="604.3199999999999" y="227" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">14.84 s</text>
+<text x="40" y="289" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Current status</text>
+<rect x="250" y="264" width="26.035999999999998" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="276.036" y="264" width="220.91500000000002" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="509.951" y="289" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">10.74 s</text>
+<text x="40" y="351" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Limits / pricing</text>
+<rect x="250" y="326" width="42.205" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="292.205" y="326" width="509.956" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="815.1610000000001" y="351" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">24.01 s</text>
+<text x="40" y="413" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Performance</text>
+<rect x="250" y="388" width="36.294000000000004" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="286.294" y="388" width="241.109" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="540.403" y="413" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">12.06 s</text>
+<text x="40" y="475" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Policy / license</text>
+<rect x="250" y="450" width="87.469" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="337.469" y="450" width="373.88800000000003" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="724.357" y="475" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">20.06 s</text>
+<text x="40" y="537" font-size="18" fill="#24313f" font-weight="400" letter-spacing="0" text-anchor="start">Technical behavior</text>
+<rect x="250" y="512" width="32.637" height="36" rx="0" fill="#a96615" stroke="#a96615" stroke-width="1"/>
+<rect x="282.637" y="512" width="485.806" height="36" rx="0" fill="#6d55a4" stroke="#6d55a4" stroke-width="1"/>
+<text x="781.443" y="537" font-size="18" fill="#24313f" font-weight="700" letter-spacing="0" text-anchor="start">22.54 s</text>
+<text x="250" y="636" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Research duration (seconds) · zero-based common scale</text>
+<text x="40" y="675" font-size="17" fill="#586777" font-weight="400" letter-spacing="0" text-anchor="start">Not end-to-end latency. No percentiles, error bars or speedup claim from n = 1 per case.</text>
+</g></svg>

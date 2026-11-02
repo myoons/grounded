@@ -1,0 +1,679 @@
+{
+  "model": "kimi-k3",
+  "reasoning_effort": "low",
+  "max_output_tokens": 1200,
+  "temperature": "provider default",
+  "concurrency": 3,
+  "repetitions": 2,
+  "prompt_sha256": "ee86c1ba4ecacb0c5fad3ba9d4bb95d43ab5a697e9b37cf8238d45dd8c964d65",
+  "dataset_sha256": "89650c776491999aa9e3d7d38b8f2f14c08383aae69575b3ceed295620cee7cf",
+  "synthetic": true,
+  "results": [
+    {
+      "case": "repeat_already_linked",
+      "repetition": 1,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1399,
+        "round_trip_ms": 2894.9,
+        "queue_delay_ms": 226,
+        "provider_execution_ms": 1774,
+        "completion_tokens": 29,
+        "reasoning_tokens": 12,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 577,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 2896
+    },
+    {
+      "case": "scope_update",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works only when every process accessing the database runs on the same host, not across network filesystems.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL require all accessing processes to run on the same host, excluding network filesystems?",
+          "reason": "Deployment feasibility depends on the corrected same-host constraint.",
+          "conditions": [
+            "Multiple application processes",
+            "All processes run on the same host"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1545,
+        "round_trip_ms": 6695.42,
+        "queue_delay_ms": 140,
+        "provider_execution_ms": 5826,
+        "completion_tokens": 172,
+        "reasoning_tokens": 19,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 649,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 6697
+    },
+    {
+      "case": "repeat_new_evidence",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "Determines whether deployment over network filesystem is viable for the application.",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1492,
+        "round_trip_ms": 15100.72,
+        "queue_delay_ms": 222,
+        "provider_execution_ms": 13955,
+        "completion_tokens": 137,
+        "reasoning_tokens": 10,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 553,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 15102
+    },
+    {
+      "case": "withdraw_before_create",
+      "repetition": 1,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1315,
+        "round_trip_ms": 2981.93,
+        "queue_delay_ms": 89,
+        "provider_execution_ms": 2105,
+        "completion_tokens": 38,
+        "reasoning_tokens": 21,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 327,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 2983
+    },
+    {
+      "case": "independent_create",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "SQLite supports foreign-key constraints for enforcing relationships.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite support foreign-key constraints to enforce relationships?",
+          "reason": "Decides whether schema can enforce relationships without application checks.",
+          "conditions": [
+            "SQLite database with enforced relationships"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-foreign-key-support",
+          "related_ids": [
+            "00000000-0000-4000-8000-000000000001"
+          ]
+        }
+      ],
+      "usage": {
+        "total_tokens": 1805,
+        "round_trip_ms": 15669.48,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 14862,
+        "completion_tokens": 437,
+        "reasoning_tokens": 307,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 636,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 15672
+    },
+    {
+      "case": "retracted_repeat",
+      "repetition": 1,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1411,
+        "round_trip_ms": 3127.83,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 2413,
+        "completion_tokens": 48,
+        "reasoning_tokens": 31,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 589,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 3132
+    },
+    {
+      "case": "explicit_retract",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "retract",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "The system explicitly withdrew the SQLite WAL network-filesystem premise; no decision will depend on it.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1500,
+        "round_trip_ms": 18345.99,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 17555,
+        "completion_tokens": 137,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 588,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 18350
+    },
+    {
+      "case": "correction_before_create",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "create",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL requires all database processes to run on the same host and is not suitable over a network filesystem.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001",
+            "00000000-0000-4000-8001-000000000002"
+          ],
+          "question": "Does SQLite WAL require all database processes to run on the same host?",
+          "reason": "Determines whether the storage design must enforce same-host access.",
+          "conditions": [
+            "Network filesystem or multi-host access is being considered"
+          ],
+          "missing_information": [
+            "Whether any access will occur from multiple hosts or over NFS-like filesystems"
+          ],
+          "topic_key": "sqlite-wal-same-host",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1474,
+        "round_trip_ms": 8860.7,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 7060,
+        "completion_tokens": 185,
+        "reasoning_tokens": 18,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 389,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 8864
+    },
+    {
+      "case": "multi_turn_scope",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works across a network filesystem provided every accessing process is on the same host.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001",
+            "00000000-0000-4000-8001-000000000002",
+            "00000000-0000-4000-8001-000000000003"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem when all processes are on the same host?",
+          "reason": "Design depends on whether same-host processes make WAL over network filesystem safe.",
+          "conditions": [
+            "All application processes run on the same host"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1677,
+        "round_trip_ms": 5217.33,
+        "queue_delay_ms": 88,
+        "provider_execution_ms": 4357,
+        "completion_tokens": 200,
+        "reasoning_tokens": 14,
+        "context_segments": 3,
+        "context_candidates": 1,
+        "context_chars": 841,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": false,
+      "passed": false,
+      "elapsed_ms": 5240
+    },
+    {
+      "case": "unchanged_scope_paraphrase",
+      "repetition": 1,
+      "changes": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL requires all processes using the database to run on the same host.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "Determines whether SQLite WAL deployment can span hosts or must be local.",
+          "conditions": [
+            "All processes on the same host"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1527,
+        "round_trip_ms": 6141.55,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 5185,
+        "completion_tokens": 153,
+        "reasoning_tokens": 17,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 630,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 6143
+    },
+    {
+      "case": "repeat_already_linked",
+      "repetition": 2,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1393,
+        "round_trip_ms": 5283.15,
+        "queue_delay_ms": 92,
+        "provider_execution_ms": 4281,
+        "completion_tokens": 23,
+        "reasoning_tokens": 6,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 577,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 5285
+    },
+    {
+      "case": "repeat_new_evidence",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "Determines whether WAL mode is safe for the planned shared network filesystem deployment.",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1505,
+        "round_trip_ms": 13131.89,
+        "queue_delay_ms": 172,
+        "provider_execution_ms": 12512,
+        "completion_tokens": 150,
+        "reasoning_tokens": 20,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 553,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 13134
+    },
+    {
+      "case": "scope_update",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works only when every process accessing the database runs on the same host, not across network filesystems.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL require all accessing processes to run on the same host rather than across network filesystems?",
+          "reason": "Determines whether WAL mode is safe for the planned multi-host deployment.",
+          "conditions": [
+            "All processes accessing the database run on the same host",
+            "Not across network filesystems"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1544,
+        "round_trip_ms": 9825.41,
+        "queue_delay_ms": 97,
+        "provider_execution_ms": 9047,
+        "completion_tokens": 171,
+        "reasoning_tokens": 7,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 649,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 9830
+    },
+    {
+      "case": "independent_create",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "create",
+          "category": "capability",
+          "statement": "SQLite supports foreign-key constraints, so relationships can be enforced.",
+          "candidate_id": null,
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite support foreign-key constraints for enforcing relationships?",
+          "reason": "Confirms whether SQLite can enforce relationships for the database design decision.",
+          "conditions": [],
+          "missing_information": [],
+          "topic_key": "sqlite-foreign-key-constraints",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1506,
+        "round_trip_ms": 10467.19,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 9757,
+        "completion_tokens": 138,
+        "reasoning_tokens": 27,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 636,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 10472
+    },
+    {
+      "case": "explicit_retract",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "retract",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works across a network filesystem.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "Speaker explicitly withdrew the WAL network-filesystem premise; it will not inform any decision.",
+          "conditions": [
+            "Multiple application processes"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1511,
+        "round_trip_ms": 3846.56,
+        "queue_delay_ms": 87,
+        "provider_execution_ms": 3360,
+        "completion_tokens": 148,
+        "reasoning_tokens": 16,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 588,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 3850
+    },
+    {
+      "case": "retracted_repeat",
+      "repetition": 2,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1398,
+        "round_trip_ms": 2362.65,
+        "queue_delay_ms": 89,
+        "provider_execution_ms": 1463,
+        "completion_tokens": 35,
+        "reasoning_tokens": 18,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 589,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 2364
+    },
+    {
+      "case": "correction_before_create",
+      "repetition": 2,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1328,
+        "round_trip_ms": 4718.6,
+        "queue_delay_ms": 94,
+        "provider_execution_ms": 4130,
+        "completion_tokens": 39,
+        "reasoning_tokens": 25,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 389,
+        "omitted_segments": 0
+      },
+      "structural_passed": false,
+      "fidelity_proxy": false,
+      "passed": false,
+      "elapsed_ms": 4723
+    },
+    {
+      "case": "withdraw_before_create",
+      "repetition": 2,
+      "changes": [],
+      "usage": {
+        "total_tokens": 1305,
+        "round_trip_ms": 9705.32,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 8939,
+        "completion_tokens": 28,
+        "reasoning_tokens": 11,
+        "context_segments": 2,
+        "context_candidates": 0,
+        "context_chars": 327,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 9708
+    },
+    {
+      "case": "unchanged_scope_paraphrase",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "link",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL requires all processes using the database to run on the same host.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001"
+          ],
+          "question": "Does SQLite WAL work across a network filesystem?",
+          "reason": "Deployment decision depends on whether WAL supports multi-host access.",
+          "conditions": [
+            "All processes on the same host"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 1520,
+        "round_trip_ms": 7226.9,
+        "queue_delay_ms": 93,
+        "provider_execution_ms": 4926,
+        "completion_tokens": 146,
+        "reasoning_tokens": 14,
+        "context_segments": 1,
+        "context_candidates": 1,
+        "context_chars": 630,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": null,
+      "passed": true,
+      "elapsed_ms": 7232
+    },
+    {
+      "case": "multi_turn_scope",
+      "repetition": 2,
+      "changes": [
+        {
+          "action": "update",
+          "category": "technical_behavior",
+          "statement": "SQLite WAL works when every process is on the same host.",
+          "candidate_id": "00000000-0000-4000-8000-000000000001",
+          "evidence_ids": [
+            "00000000-0000-4000-8001-000000000001",
+            "00000000-0000-4000-8001-000000000002",
+            "00000000-0000-4000-8001-000000000003"
+          ],
+          "question": "Does SQLite WAL work when every process is on the same host?",
+          "reason": "The design now depends on the narrowed same-host WAL condition.",
+          "conditions": [
+            "Every process is on the same host",
+            "SQLite WAL mode is used"
+          ],
+          "missing_information": [],
+          "topic_key": "sqlite-wal-network",
+          "related_ids": []
+        }
+      ],
+      "usage": {
+        "total_tokens": 2170,
+        "round_trip_ms": 19915.91,
+        "queue_delay_ms": 102,
+        "provider_execution_ms": 19355,
+        "completion_tokens": 693,
+        "reasoning_tokens": 512,
+        "context_segments": 3,
+        "context_candidates": 1,
+        "context_chars": 841,
+        "omitted_segments": 0
+      },
+      "structural_passed": true,
+      "fidelity_proxy": true,
+      "passed": true,
+      "elapsed_ms": 19919
+    }
+  ],
+  "summary": {
+    "passed": 18,
+    "total": 20
+  }
+}

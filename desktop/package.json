@@ -1,0 +1,28 @@
+{
+  "name": "roomshift-research",
+  "version": "0.7.1",
+  "private": true,
+  "type": "module",
+  "main": "meeting-main.mjs",
+  "scripts": {
+    "start": "electron meeting-main.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:meeting": "electron tests/meeting-smoke.mjs",
+    "test:finalization": "electron tests/finalization-ui-smoke.mjs",
+    "package": "node package-meeting.mjs",
+    "package:meeting": "node package-meeting.mjs"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "45.1.0"
+  },
+  "overrides": {
+    "@electron/asar": {
+      "glob": "14.0.2",
+      "minimatch": "11.0.1"
+    }
+  },
+  "dependencies": {
+    "@recallai/desktop-sdk": "2.0.42"
+  }
+}
