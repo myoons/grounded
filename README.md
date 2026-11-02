@@ -7,7 +7,7 @@ shows the live transcript beside compact cards containing **the claim, a direct
 finding, and inspectable evidence**. End the meeting and reopen the same script,
 cards and sources later from **Past meetings**.
 
-**Version 0.7.1 · macOS Apple Silicon.** [Run locally](docs/RUNNING.md) ·
+**Version 0.7.2 · macOS Apple Silicon.** [Run locally](docs/RUNNING.md) ·
 [Architecture](docs/SYSTEM_GUIDE.md) · [Evaluation](docs/VALIDATION.md)
 
 > **Example:** “SQLite WAL works across servers on a network filesystem.”

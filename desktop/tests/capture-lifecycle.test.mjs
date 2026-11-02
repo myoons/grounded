@@ -55,6 +55,13 @@ test("unknown transitions cannot change capture state", () => {
   assert.equal(lifecycle.phase, "idle");
 });
 
+test("completed recovery takes precedence over historical interruption in saved views", () => {
+  const archived = { phase: "idle", state: "stopped", archived: true, interrupted: true };
+  assert.equal(captureStatus({ ...archived, completed: true }), "Saved meeting");
+  assert.equal(captureStatus({ ...archived, incomplete: true }), "Checks incomplete");
+  assert.equal(captureStatus(archived), "Interrupted meeting");
+});
+
 test("external End preempts pending startup or pause and ignores their late completion", () => {
   for (const phase of ["starting", "pausing"]) {
     const lifecycle = new CaptureLifecycle();

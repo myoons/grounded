@@ -5,7 +5,7 @@ A passing schema or exact quotation check does not prove semantic correctness.
 
 ## Automated implementation checks
 
-The 0.7.1 source passed **222 Python tests and 63 desktop tests**, plus Ruff
+The 0.7.2 source passed **222 Python tests and 64 desktop tests**, plus Ruff
 and isolated Electron renderer checks. Reproduce the current suite with:
 
 ```sh
@@ -63,6 +63,18 @@ changes and which alternatives were not adopted.
   unavailable secure storage without falsely displaying active capture.
 
 ## Device and quality boundaries
+
+An attended MacBook run of 0.7.1 reported functional microphone/system-audio routes,
+encrypted backlog retention across a tunnel interruption and normal app restart,
+explicit recovery to an empty backlog, Meet-departure completion, headset reconnect
+and saved script/card/source restoration. It also exposed a completed-history label
+inconsistency, corrected in 0.7.2 with unit and renderer-reload regression tests.
+
+That run observed recognition errors, including the technical term “WAL”. Its first
+remote-audio trial used speakers, so channel isolation was not established. Exact
+tail transcription, receipt-by-receipt deletion ordering and a server-restart scenario
+were not established by that attended run. Those observations are distinct from
+the deterministic integration tests above; passing recovery does not imply accurate ASR.
 
 Automated tests do not establish real macOS Keychain authorization, microphone or
 headset behavior. The app requires normal OS permissions; unavailable secure storage

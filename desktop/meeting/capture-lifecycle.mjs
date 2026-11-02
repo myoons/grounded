@@ -23,8 +23,8 @@ export class CaptureLifecycle {
   owns(operation) { return this.#operation === operation; }
 }
 
-export function captureStatus({ phase, state, hasInputs, incomplete = false, archived = false, interrupted = false }) {
-  if (archived) return incomplete ? "Checks incomplete" : interrupted ? "Interrupted meeting" : "Saved meeting";
+export function captureStatus({ phase, state, hasInputs, incomplete = false, completed = false, archived = false, interrupted = false }) {
+  if (archived) return incomplete ? "Checks incomplete" : interrupted && !completed ? "Interrupted meeting" : "Saved meeting";
   if (phase === "ending" || state === "finishing") return "Finishing checks…";
   if (phase === "pausing") return "Pausing…";
   if (phase === "starting") return "Starting…";

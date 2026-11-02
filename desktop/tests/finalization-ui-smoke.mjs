@@ -4,11 +4,11 @@ import { fileURLToPath } from "node:url";
 import { startMeetingServer } from "../meeting-server.mjs";
 
 let window, server;
-let state = "capturing", finalization = { state: "not_started" };
+let state = "capturing", finalization = { state: "not_started" }, interrupted = false;
 let stops = 0, clears = 0, captureAttempts = 0;
 let backlog = 0, processingResumes = 0, failDrain = false, permanent = false, failPause = false, storageMode = "ready";
 const identifier = "00000000-0000-4000-8000-000000000001";
-const snapshot = () => ({ id: identifier, state, finalization, title: "Finalization fixture", epoch: 1, elapsed_ms: 0,
+const snapshot = () => ({ id: identifier, state, finalization, interrupted, title: "Finalization fixture", epoch: 1, elapsed_ms: 0,
   detector: {}, candidates: [], segments: [], research_enabled: true, presentation: {} });
 const evaluate = (source) => window.webContents.executeJavaScript(source, true);
 async function until(source) {
@@ -81,6 +81,17 @@ async function main() {
     await until("document.getElementById('session-state').textContent === 'Checks incomplete'");
     assert.equal(captureAttempts, 0);
     const repeatedEndIdempotent = stops === 1;
+    interrupted = true;
+    finalization = { state: "complete" };
+    await evaluate("document.getElementById('back').click()");
+    await until("document.querySelector('.history-card')?.textContent.includes('Checks complete')");
+    await evaluate("document.querySelector('.history-card').click()");
+    await until("document.getElementById('session-state').textContent === 'Saved meeting'");
+    await window.loadURL(server.origin + "/");
+    await until("document.querySelector('.history-card')?.textContent.includes('Checks complete')");
+    await evaluate("document.querySelector('.history-card').click()");
+    await until("document.getElementById('session-state').textContent === 'Saved meeting'");
+    assert.equal(captureAttempts, 0);
     backlog = 2;
     failDrain = true;
     state = "paused";
@@ -144,7 +155,7 @@ async function main() {
       finishingReloadAndReopen: true, incompleteStatePersistedInList: true, recoveryRetainsOnFailure: true,
       explicitRecoveryFinalizesWithoutCapture: true, savedChecksRecoverWithoutAudio: true, failedEndNeverClaimsListening: true,
       failedPauseNeverFabricatesServerState: true, permanentCapacityDisablesResume: true,
-      hangingStorageDoesNotBlockHistory: true, storageFailureVisibleInLobby: true, captureAttempts, syntheticBackend: true }));
+      hangingStorageDoesNotBlockHistory: true, storageFailureVisibleInLobby: true, recoveredCompletionPreservedAcrossReopen: true, captureAttempts, syntheticBackend: true }));
   } catch (error) {
     console.error(error);
     process.exitCode = 1;

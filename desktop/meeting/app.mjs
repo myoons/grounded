@@ -81,7 +81,8 @@ function buttons() {
   element("resume").hidden = state !== "paused";
   element("stop").hidden = !["capturing", "paused"].includes(state);
   const status = captureStatus({ phase: captureLifecycle.phase, state, hasInputs: inputs.length > 0,
-    incomplete: session?.finalization?.state === "incomplete", archived: historyMode, interrupted: session?.interrupted });
+    incomplete: session?.finalization?.state === "incomplete", completed: session?.finalization?.state === "complete",
+    archived: historyMode, interrupted: session?.interrupted });
   const preserveStatus = historyMode || (state === "capturing" && !inputs.length && captureLifecycle.phase !== "starting");
   element("session-state").textContent = preserveStatus ? status : state === "capturing" && connected && inputs.length && !captureLifecycle.busy
     ? session.detector?.blocked ? "Checks paused" : inputSummary(inputStates)
