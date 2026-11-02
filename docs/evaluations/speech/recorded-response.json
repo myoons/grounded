@@ -1,0 +1,87 @@
+{
+  "words": [
+    {
+      "end": 0.08,
+      "start": 0,
+      "text": " The"
+    },
+    {
+      "end": 0.42,
+      "start": 0.08,
+      "text": " export"
+    },
+    {
+      "end": 0.82,
+      "start": 0.42,
+      "text": " feature"
+    },
+    {
+      "end": 1.08,
+      "start": 0.82,
+      "text": " is"
+    },
+    {
+      "end": 1.38,
+      "start": 1.08,
+      "text": " available"
+    },
+    {
+      "end": 2.62,
+      "start": 1.38,
+      "text": " only"
+    },
+    {
+      "end": 2.9,
+      "start": 2.62,
+      "text": " on"
+    },
+    {
+      "end": 3.02,
+      "start": 2.9,
+      "text": " the"
+    },
+    {
+      "end": 3.34,
+      "start": 3.02,
+      "text": " enterprise"
+    },
+    {
+      "end": 3.8,
+      "start": 3.34,
+      "text": " plan"
+    },
+    {
+      "end": 4.04,
+      "start": 3.8,
+      "text": " if"
+    },
+    {
+      "end": 4.14,
+      "start": 4.04,
+      "text": " the"
+    },
+    {
+      "end": 4.5,
+      "start": 4.14,
+      "text": " administrator"
+    },
+    {
+      "end": 5.24,
+      "start": 4.5,
+      "text": " enables"
+    },
+    {
+      "end": 5.62,
+      "start": 5.24,
+      "text": " it."
+    }
+  ],
+  "language": "en",
+  "uncertain": false,
+  "inference_ms": 1388.73,
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "round_trip_ms": 2584.08,
+  "text": "The export feature is available only on the enterprise plan if the administrator enables it.",
+  "wall_ms_excluding_tts": 2588.12,
+  "pcm_sha256": "167e60572b3cf745396e95efd82455393676f59f06a860344cbaee2e1f96e896"
+}

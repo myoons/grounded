@@ -5,6 +5,30 @@
 AudioWorklet PCM16 (16 kHz, mono) -> trusted local API -> Runpod queue ->
 Whisper large-v3 CUDA worker -> validated word timestamps -> meeting transcript.
 
+## Recorded endpoint demonstration
+
+The custom Runpod worker processed synthetic English audio saying:
+
+> The export feature is available only on the enterprise plan if the administrator enables it.
+
+The [recorded validated response](evaluations/speech/recorded-response.json) contains
+the recognized words and timestamps, the same reconstructed sentence,
+`uncertain: false`, 1,388.73 ms worker inference and 2,584.08 ms client round trip.
+This is a real-provider observation from the audio-boundary experiment on November 2,
+2026, not a mocked response or a latency guarantee. Audio was synthesized with macOS
+Samantha at 185 words/minute; its PCM SHA256 is included in the result.
+
+The model was `Systran/faster-whisper-large-v3`, pinned to revision
+`edaa852ec7e145841d8ffdb056a99866b5f0a478`. The response shown is the validated
+application-adapter result with reconstructed text and timing metadata, not the raw
+Runpod job envelope. Credentials, endpoint identifiers and audio bytes are omitted.
+
+The request contract is an input object containing `language: "en"` and base64
+mono 16 kHz PCM16 audio in `pcm`. To exercise the endpoint with generated audio,
+follow [setup](RUNNING.md), then run `scripts.prepare_meeting_fixtures` and
+`scripts.evaluate_chunk_boundary` as Python modules. The latter makes a real GPU
+request and validates the retained complete utterance; it incurs provider charges.
+
 The application has no local fallback. Retired local small-model code has been
 removed; earlier baseline measurements remain historical evidence. English is fixed
 at both API and worker boundaries.

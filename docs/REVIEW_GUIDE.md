@@ -4,6 +4,9 @@ Grounded demonstrates a custom Runpod Serverless transcription endpoint inside a
 meeting workflow. The desktop captures authorized audio, the backend manages work
 and durability, and source-linked cards expose researched findings.
 
+For a concrete input/output example, start with the
+[recorded custom endpoint demonstration](GPU_SPEECH.md#recorded-endpoint-demonstration).
+
 ## Read the code in this order
 
 | Question | Entry point | Contract to inspect |
