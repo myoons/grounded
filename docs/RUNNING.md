@@ -98,6 +98,14 @@ OS prompts. No screen-recording picker is required. Development builds may need 
 same app permission normally removed/re-added after replacement. Never edit TCC
 databases or disable quarantine/security protections.
 
+If an updated development build reports a secure-storage timeout, quit it and check
+the `Grounded Safe Storage` item in the login keychain using Keychain Access. Through
+normal user authorization, allow only the current installed app if needed; do not
+show the password, delete the item, select access for all applications or reset the
+keychain. Restart and verify a short capture and a subsequent relaunch. Ad-hoc builds
+may need renewed authorization after replacement; a successful signature integrity
+check is not proof of stable Keychain access across updates.
+
 Join Google Meet in Chrome, then click its card in Grounded. Detection alone does
 not record. Pause/Resume reconnects inputs; End stops capture and drains accepted processing.
 Afterward, Meetings returns to the lobby without deleting results. Past meetings

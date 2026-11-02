@@ -70,6 +70,20 @@ explicit recovery to an empty backlog, Meet-departure completion, headset reconn
 and saved script/card/source restoration. It also exposed a completed-history label
 inconsistency, corrected in 0.7.2 with unit and renderer-reload regression tests.
 
+Attended follow-up on November 3, 2026 verified the unchanged 0.7.2 package on the
+MacBook. After authorizing the exact installed app through normal macOS Keychain
+and Accessibility controls, secure storage initialized without a warning and two
+distinct spoken English test sentences were transcribed accurately, one before
+and one after normal Quit/relaunch. Ending each test left no pending audio chunks;
+the wrapped key remained. The corrected completed-history label and saved content
+also survived relaunch. No code, signature, key or security-policy bypass was used.
+
+This establishes those observed sessions, not word-perfect recognition, per-utterance
+duplicate accounting, future-update permission continuity or a unique root cause
+for the earlier access failure. The existing incomplete-history case had no matching
+saved fixture in the attended check; that state is covered by automated tests rather
+than inferred from completed meetings.
+
 That run observed recognition errors, including the technical term “WAL”. Its first
 remote-audio trial used speakers, so channel isolation was not established. Exact
 tail transcription, receipt-by-receipt deletion ordering and a server-restart scenario
