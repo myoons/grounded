@@ -7,11 +7,11 @@ scores below to the newer configuration.
 
 ## Decision in one minute
 
-**Keep the existing English production prompt.** An English revision with an explicit
-decision order and three development-derived examples did not demonstrate an improvement.
-We retain the rejected revision and every measured result rather than changing labels
-until a prompt appears perfect. This is an extraction evaluation, not a fact-checking
-accuracy evaluation or an end-to-end audio benchmark.
+**The baseline was retained over the experimental revision.** An English revision
+with an explicit decision order and three development-derived examples did not
+demonstrate an improvement. Both configurations, original labels and measured
+results are retained for reproducibility. This experiment evaluates extraction,
+separately from factual answer quality and audio transcription.
 
 On November 2, 2026 (Korea time), the production prompt passed **19 of 20** new synthetic
 held-out cases in one run. The revision passed **37 of 40** observations over two runs
@@ -66,12 +66,11 @@ Kimi performance:
 - The old evaluator remains available for historical reproducibility. Its broader
   action-presence checks are not equivalent to this stricter scorer.
 
-This is a small, agent-authored, synthetic development artifact, **not an independently
-annotated benchmark**. Programmatic matching does not judge statement fidelity, question
-quality, relevance of every additional citation, or factual truth. Manual inspection of
-held-out statements found the expected subjects retained, but is not a blinded expert
-semantic evaluation. ASR errors, long-context truncation, accents and real meeting
-distribution are outside this test.
+This is a small, project-specific synthetic set, not an independently annotated
+benchmark. Programmatic matching checks actions and references rather than complete
+statement fidelity or factual truth. Qualitative inspection found the expected subjects
+retained; it was not blinded expert adjudication. ASR errors, long-context truncation,
+accents and natural-meeting distributions require separate evaluation.
 
 ## Actual results
 
@@ -111,7 +110,8 @@ usage, prompt and dataset hashes, every output and failures; no credentials or r
 All four isolated exclusion cases and the all-exclusions dialogue passed in each
 measured held-out run. That is useful evidence, not a guarantee against future false
 positives. There is no statistically established winner from this small experiment.
-The conservative release choice is therefore to leave the production prompt unchanged.
+The baseline was retained at this stage; the subsequent density correction and its
+new regression are recorded separately in the capacity-policy report.
 
 ## Reproduce
 
@@ -134,10 +134,5 @@ Evidence: [baseline development](evaluations/claim-gold/baseline-dev.json),
 [revision held-out](evaluations/claim-gold/revised-heldout.json),
 [experimental prompt](../tests/data/claim_prompt_candidate.txt).
 
-**Accurate presentation wording:** “We evaluated the English extractor against a frozen
-synthetic set covering six claim categories, four exclusions and state transitions.
-The production prompt passed 19/20 held-out cases in the recorded run. A prompt revision
-did not establish an improvement, so we retained the baseline and documented the misses.”
-
-Do not say “the prompt passed the entire test set,” “95% production accuracy,” or
-“strict JSON guarantees correct claims.”
+The recorded 19/20 result describes this frozen set and rubric, not production
+accuracy. Strict JSON constrains structure; semantic quality remains a separate property.

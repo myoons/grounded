@@ -21,7 +21,7 @@ operator opening that room starts collection. Pause and End remain explicit.
 
 The speech endpoint is **our deployed handler, container and pinned model**. Kimi is
 a **Runpod public endpoint**; we do not control its GPU allocation. Firecrawl is
-external search, not a Runpod product. This distinction matters in the presentation.
+external search, not a Runpod product. This separates the custom deployment from managed services.
 
 The desktop-to-service connection is localhost, optionally forwarded over SSH.
 The service-to-provider connections use HTTPS. This is a single-operator demo, not

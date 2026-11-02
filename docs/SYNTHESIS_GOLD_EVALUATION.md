@@ -17,7 +17,7 @@ inspected fixtures, not a new held-out test or a production accuracy estimate.
 - All original citation-integrity predicates passed, including vacuous empty-citation
   cases. This does not mean every answer supplied a citation or was semantically correct.
 
-Single-agent review of all 30 final summaries and caveats found a remaining limitation:
+Qualitative inspection of all 30 final summaries and caveats found a limitation:
 the second historical-support answer adds an unnecessary caveat about current status in
 November 2026 even though the question asks about January 2026. The main historical answer
 is correct; the irrelevant qualification is not detected by the lexical scorer. Several
@@ -30,14 +30,12 @@ not new runs. Their dataset hashes, denominators, and structural/fidelity scorin
 checked again by deterministic tests. A scorer regression also verifies that transport
 failures remain failed observations when rescored, rather than crashing or disappearing.
 
-Run provenance: source HEAD `9516385c004703ea844615c56e5c52b02b9c43cd` with concurrent
-unrelated integration work; synthesis prompt and fixture hashes match the original run.
+Run provenance: synthesis prompt and fixture hashes match the original run.
 The evaluated research module SHA256 is
 `b0002ef7ca1c838ac1c6bd8e540d9e9fe1e1387423860ceda060efc78dd1d5d6`;
 model module SHA256 is
 `dc2c4f62651788b31923c9bebf32427ec1f8efb38d41f4c57e64434f4552ed85`.
-These hashes identify the actual inference components rather than claiming the entire
-working tree was pristine. The result file SHA256 is
+These hashes identify the evaluated inference components. The result file SHA256 is
 `7e419cff1fc1f8c0904b2ea16eb53063b10c9d3ff40e95a79b3ecb1ef28be5d9`.
 
 ## Independent audit and post-hoc v2 regression
@@ -77,7 +75,7 @@ This offline command makes no provider calls and intentionally exits 1 for 27/30
 
 On November 2, 2026, the unchanged production `MeetingResearcher` was exercised with 15 frozen fictional claim/evidence fixtures, twice each, at concurrency three. The real Runpod Kimi K3 endpoint produced 26 completions. Four runs terminated deterministically before inference: two empty-source runs and two benchmark passages rejected by the quote selector. No Firecrawl search was performed in this evaluation.
 
-**Result: 27/30 passed the predeclared automated checks, not 100%.** The outputs also received a single-agent qualitative review against the supplied fixtures; that is not an independent human adjudication or a validated entailment metric.
+**Result: 27/30 passed the predeclared automated checks.** Model-assisted qualitative inspection supplemented these checks; neither is independent human adjudication or a validated entailment metric.
 
 The production prompt was not tuned on these results. The dataset and expectations were written before the first call and were not relaxed after observing failures. This is an authored regression set, not an independently curated held-out benchmark. Fixture source URLs use `example.com` and a synthetic Reddit path; the injected search adapter never fetches them. The title explicitly identifies fictional content, which may encourage caution differently from ordinary retrieved pages.
 

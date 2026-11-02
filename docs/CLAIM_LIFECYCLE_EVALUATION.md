@@ -93,14 +93,15 @@ uv run python -m scripts.evaluate_claim_lifecycle --repeat 2 --output /path/to/l
 uv run python -m unittest tests.test_claim_lifecycle -q
 ```
 
-The real-model command incurs charges, uses concurrency 3, the existing private credential
-file, reasoning effort `low`, 1200 output tokens and provider-default temperature. It writes
+The recorded run used concurrency 3, reasoning effort `low`, 1200 output tokens and
+provider-default temperature. The command incurs charges and uses the current production
+adapter; its later 3200-token configuration is described in [capacity policy](CAPACITY_POLICY.md).
+It writes
 every observation and exits 1 if any case fails; no failures are discarded or automatically
 rerun until success. Prompt/dataset hashes and usage are recorded in
 [the full synthetic results](evaluations/claim-lifecycle/results.json).
 
-**Accurate presentation statement:** “We test both lifecycle actions and selected scope
-fidelity constraints. The unchanged prompt passed 18 of 20 observations in the additional
-lifecycle evaluation; a separate real-service test verifies identity, revision handling,
-no rerun for links and rejection of stale completions. Semantic consistency is still a
-known limitation.”
+The model evaluation measures lifecycle actions and selected scope constraints.
+Separate deterministic service tests verify stable identity, revision handling,
+no redundant research for repeated links and rejection of stale completions. These
+are complementary measurements, not interchangeable guarantees of semantic consistency.

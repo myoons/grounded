@@ -43,7 +43,7 @@ only; no meeting bot or Recall recording/upload API is used.
 - **Review the implementation:** [Code guide](docs/REVIEW_GUIDE.md) — entry points, contracts and evidence.
 - **Find deeper details:** [Documentation index](docs/README.md).
 
-## What makes this more than a model call?
+## Engineering highlights
 
 - Audio capture continues while independent checks run in the background.
 - Encrypted, quota-bounded local audio retention decouples capture from slow transcription;

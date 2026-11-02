@@ -40,8 +40,8 @@ Runtime location:
   a fresh nonce. The application format identifier is authenticated as AAD.
 - A random 256-bit data key is wrapped with Electron `safeStorage`; on macOS this
   relies on OS Keychain-backed protection. The wrapped key is stored as `key.enc`.
-- If OS encryption is unavailable, the insecure `basic_text` backend is selected,
-  or an existing key cannot be recovered, capture fails closed. There is no
+- Capture fails closed when OS encryption is unavailable, the OS adapter reports
+  the insecure `basic_text` backend, or an existing key cannot be recovered. There is no
   plaintext fallback. Encryption at rest does not protect against a compromised
   logged-in account or a running application that can decrypt the files.
 - Writes use an exclusive temporary file, file `fsync`, atomic rename, and directory
